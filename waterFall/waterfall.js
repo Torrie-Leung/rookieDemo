@@ -12,6 +12,24 @@ window.onload = function () {
       {src:"08.jpeg"},
       ]
   }
+
+  window.onscroll = function () {
+    if(checkScroll()){
+      const oParent = document.getElementById('main')
+      for(let i = 0; i< dataImg.data.length; i++){
+        let oPin = document.createElement('div')
+        oPin.className ="pin"
+        oParent.appendChild(oPin)
+        const oBox = document.createElement('div')
+        oBox.className ="box"
+        oPin.appendChild(oBox)
+        const oImg = document.createElement('img')
+        oImg.src = 'images/'+dataImg.data[i].src
+        oBox.appendChild(oImg)
+      }
+      waterfall()
+    }
+  }
 }
 
 function waterfall(){
@@ -68,7 +86,7 @@ function getMinHIndex(arr,minH){
 }
 
 function checkScroll(){
-  const aPin = document.getElementsByTagName('pin')
+  const aPin = document.getElementsByClassName('pin')
   const lastPinH = aPin[aPin.length - 1].offsetTop - (Math.floor(aPin[aPin.length - 1].offsetHeight/2))
   const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
   const documentH = document.documentElement.clientHeight
