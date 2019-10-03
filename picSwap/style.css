@@ -1,0 +1,20 @@
+*{
+      margin: 0;
+      padding: 0;
+    }
+    #outer{
+      width: 500px;
+      margin: 0 auto;
+      padding: 10px;
+      text-align: center;
+      background-color: aquamarine;
+      
+    }
+    img{
+      width: 500px
+    }
+    button{
+      padding: 5px;
+      border-radius: 5px;
+      font-size:16px;
+    }
