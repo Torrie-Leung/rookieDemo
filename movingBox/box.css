@@ -1,0 +1,16 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+#btn2R{
+  padding: 5px;
+  border-radius: 5px;
+  background-color: bisque;
+}
+#box1{
+  width: 100px;
+  height: 100px;
+  background-color: bisque;
+  position: absolute;
+  left: 0;
+}
