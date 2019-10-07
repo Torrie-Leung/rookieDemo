@@ -5,38 +5,32 @@ window.onload = function () {
   let timer
 
   btn2R.onclick = function() {
-    clearInterval(timer)
-    //create a timer
-    timer =setInterval(function(){
-      const oldV = parseInt(getStyle(box1,"left"))
-      
-      let newV = oldV + 13
-      box1.style.left = newV + 'px'
-
-      if (newV >400){
-        newV = 400
-      }
-
-      if(newV == 400){
-        clearInterval(timer)
-      }
-    },30)
+    moveBox(box1,13,400)
   }
 
   btn2L.onclick = function() {
+    moveBox(box1,13,0)
+  }
+
+  function moveBox(obj,speed,target){
     clearInterval(timer)
+    const current = parseInt(getStyle(obj,'left'))
+    if(current > target){
+      speed = -speed
+    }
+
     //create a timer
     timer =setInterval(function(){
-      const oldV = parseInt(getStyle(box1,"left"))
+      const oldV = parseInt(getStyle(obj,"left"))
       
-      let newV = oldV - 13
-      box1.style.left = newV + 'px'
+      let newV = oldV + speed
+      
 
-      if (newV <0){
-        newV = 0
+      if (speed<0&&newV <target || speed>0&&newV > target){
+        newV = target
       }
-
-      if(newV == 0){
+      obj.style.left = newV + 'px'
+      if(newV == target){
         clearInterval(timer)
       }
     },30)
