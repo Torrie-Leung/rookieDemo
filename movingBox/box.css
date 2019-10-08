@@ -7,10 +7,13 @@
   border-radius: 5px;
   background-color: bisque;
 }
-#box1{
+#box1,#box2{
   width: 100px;
   height: 100px;
   background-color: bisque;
   position: absolute;
   left: 0;
+}
+#box2{
+  top:200px;
 }

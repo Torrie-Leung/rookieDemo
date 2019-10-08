@@ -2,26 +2,27 @@ window.onload = function () {
   const box1 = document.querySelector('#box1')
   const btn2R = document.querySelector('#btn2R')
   const btn2L = document.querySelector('#btn2L')
-  let timer
+  //let timer
 
   btn2R.onclick = function() {
-    moveBox(box1,13,400)
+    moveBox(box1,'left',13,400)
   }
 
   btn2L.onclick = function() {
-    moveBox(box1,13,0)
+    moveBox(box1,'left',13,0)
+    moveBox(box2,'width',13,800)
   }
 
-  function moveBox(obj,speed,target){
-    clearInterval(timer)
-    const current = parseInt(getStyle(obj,'left'))
+  function moveBox(obj,attr,speed,target){
+    clearInterval(obj.timer)
+    const current = parseInt(getStyle(obj,attr))
     if(current > target){
       speed = -speed
     }
 
     //create a timer
-    timer =setInterval(function(){
-      const oldV = parseInt(getStyle(obj,"left"))
+    obj.timer =setInterval(function(){
+      const oldV = parseInt(getStyle(obj,attr))
       
       let newV = oldV + speed
       
@@ -29,9 +30,9 @@ window.onload = function () {
       if (speed<0&&newV <target || speed>0&&newV > target){
         newV = target
       }
-      obj.style.left = newV + 'px'
+      obj.style[attr] = newV + 'px'
       if(newV == target){
-        clearInterval(timer)
+        clearInterval(obj.timer)
       }
     },30)
   }
