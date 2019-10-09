@@ -10,10 +10,12 @@ window.onload = function () {
 
   btn2L.onclick = function() {
     moveBox(box1,'left',13,0)
-    moveBox(box2,'width',13,800)
+    moveBox(box2,'width',13,800,function(){
+      moveBox(box2,'height',13,400)
+    })
   }
 
-  function moveBox(obj,attr,speed,target){
+  function moveBox(obj,attr,speed,target,callback){
     clearInterval(obj.timer)
     const current = parseInt(getStyle(obj,attr))
     if(current > target){
@@ -33,6 +35,7 @@ window.onload = function () {
       obj.style[attr] = newV + 'px'
       if(newV == target){
         clearInterval(obj.timer)
+        callback()
       }
     },30)
   }
