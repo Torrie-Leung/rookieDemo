@@ -35,7 +35,7 @@ window.onload = function () {
       obj.style[attr] = newV + 'px'
       if(newV == target){
         clearInterval(obj.timer)
-        callback()
+        callback && callback()
       }
     },30)
   }
