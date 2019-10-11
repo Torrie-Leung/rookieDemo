@@ -37,3 +37,7 @@
   margin: 0 5px;
   background-color: rgba(0,0,0,0.6)
 }
+
+#navRect a:hover{
+  background-color: rgba(0,0,0,0.9)
+}

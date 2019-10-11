@@ -7,4 +7,8 @@ window.onload = function () {
   const navRect = document.getElementById('navRect')
   const outer = document.getElementById('outer')
   navRect.style.left = (outer.offsetWidth-navRect.offsetWidth)/2 + 'px'
+
+  const index = 0
+  const allA = document.getElementsByTagName('a')
+  allA[index].style.backgroundColor = "rgba(0,0,0,0.9)"
 }
