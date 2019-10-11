@@ -1,0 +1,20 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+#outer{
+  width: 245px;
+  height: 225px;
+  margin: 50px auto;
+  padding: 10px 0;
+  background-color: yellowgreen
+}
+
+#imgList{
+  list-style: none;
+  /* width: 980px; */
+}
+#imgList li{
+  float: left;
+  margin: 0 10px;
+}
