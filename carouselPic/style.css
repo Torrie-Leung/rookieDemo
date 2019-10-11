@@ -7,14 +7,33 @@
   height: 225px;
   margin: 50px auto;
   padding: 10px 0;
-  background-color: yellowgreen
+  background-color: yellowgreen;
+  position: relative;
+  overflow: hidden;
+  
 }
 
 #imgList{
   list-style: none;
   /* width: 980px; */
+  position: absolute;
+  left: -245px;
+  
 }
 #imgList li{
   float: left;
   margin: 0 10px;
+}
+
+#navRect {
+  position: absolute;
+  bottom: 5%;
+}
+
+#navRect a{
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  background-color: rgba(0,0,0,0.6)
 }
