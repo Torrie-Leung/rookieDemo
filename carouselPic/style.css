@@ -15,10 +15,7 @@
 
 #imgList{
   list-style: none;
-  /* width: 980px; */
   position: absolute;
-  left: -245px;
-  
 }
 #imgList li{
   float: left;

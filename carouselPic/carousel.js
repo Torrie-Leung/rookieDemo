@@ -17,8 +17,9 @@ window.onload = function () {
     allA[i].idx = i
     allA[i].onclick = function () {
       index = this.idx
-      imgList.style.left = -245*index + 'px'
+      //imgList.style.left = -245*index + 'px'
       setRect()
+      moveBox(imgList,'left',20,-245*index,function(){})
     }
   }
 
