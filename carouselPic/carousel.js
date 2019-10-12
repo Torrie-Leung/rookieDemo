@@ -8,7 +8,24 @@ window.onload = function () {
   const outer = document.getElementById('outer')
   navRect.style.left = (outer.offsetWidth-navRect.offsetWidth)/2 + 'px'
 
-  const index = 0
+  let index = 0
   const allA = document.getElementsByTagName('a')
-  allA[index].style.backgroundColor = "rgba(0,0,0,0.9)"
+  allA[index].style.backgroundColor = "khaki"
+
+  //bind eventlistener function to all a
+  for(let i = 0; i<allA.length; i++){
+    allA[i].idx = i
+    allA[i].onclick = function () {
+      index = this.idx
+      imgList.style.left = -245*index + 'px'
+      setRect()
+    }
+  }
+
+  function setRect(){
+    for(let i = 0; i <allA.length; i++){
+      allA[i].style.backgroundColor = ''
+    }
+    allA[index].style.backgroundColor = 'khaki'
+  }
 }
