@@ -27,6 +27,7 @@ window.onload = function () {
   function setRect(){
     if(index >= imgArr.length-1){
       index = 0
+      imgList.style.left = 0+'px'
     }
     for(let i = 0; i <allA.length; i++){
       allA[i].style.backgroundColor = ''
