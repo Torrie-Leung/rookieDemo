@@ -22,11 +22,22 @@ window.onload = function () {
       moveBox(imgList,'left',20,-245*index,function(){})
     }
   }
+  autoChange()
 
   function setRect(){
     for(let i = 0; i <allA.length; i++){
       allA[i].style.backgroundColor = ''
     }
     allA[index].style.backgroundColor = 'khaki'
+  }
+
+  function autoChange(){
+    let timer =setInterval(function(){
+      index++
+      moveBox(imgList,'left',20,-245*index,function(){})
+      if(index == allA.length){
+        index = 0
+      }
+    },3000)
   }
 }
