@@ -11,15 +11,18 @@ window.onload = function () {
   let index = 0
   const allA = document.getElementsByTagName('a')
   allA[index].style.backgroundColor = "khaki"
-
+  let timer
   //bind eventlistener function to all a
   for(let i = 0; i<allA.length; i++){
     allA[i].idx = i
     allA[i].onclick = function () {
       index = this.idx
+      clearInterval(timer)
       //imgList.style.left = -245*index + 'px'
       setRect()
-      moveBox(imgList,'left',20,-245*index,function(){})
+      moveBox(imgList,'left',20,-245*index,function(){
+        autoChange()
+      })
     }
   }
   autoChange()
@@ -36,7 +39,7 @@ window.onload = function () {
   }
 
   function autoChange(){
-    let timer =setInterval(function(){
+    timer =setInterval(function(){
       index++
       index %= imgArr.length
       //console.log(index,index %= imgArr.length)
