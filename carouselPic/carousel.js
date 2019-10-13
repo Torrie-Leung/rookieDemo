@@ -25,6 +25,9 @@ window.onload = function () {
   autoChange()
 
   function setRect(){
+    if(index >= imgArr.length-1){
+      index = 0
+    }
     for(let i = 0; i <allA.length; i++){
       allA[i].style.backgroundColor = ''
     }
@@ -33,13 +36,15 @@ window.onload = function () {
 
   function autoChange(){
     let timer =setInterval(function(){
-      setRect()
-      moveBox(imgList,'left',20,-245*index,function(){})
       index++
+      index %= imgArr.length
+      //console.log(index,index %= imgArr.length)
+      moveBox(imgList,'left',20,-245*index,function(){
+        setRect()
+      })
       
-      if(index == allA.length){
-        index = 0
-      }
+      
+      
     },3000)
   }
 }
