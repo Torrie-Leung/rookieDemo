@@ -33,8 +33,10 @@ window.onload = function () {
 
   function autoChange(){
     let timer =setInterval(function(){
-      index++
+      setRect()
       moveBox(imgList,'left',20,-245*index,function(){})
+      index++
+      
       if(index == allA.length){
         index = 0
       }
