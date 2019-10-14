@@ -12,7 +12,7 @@ function moveBox(obj,attr,speed,target,callback){
       let newV = oldV + speed
       
 
-      if (speed<0&&newV <target || speed>0&&newV > target){
+      if (speed < 0 && newV < target || speed > 0 && newV > target){
         newV = target
       }
       obj.style[attr] = newV + 'px'
@@ -25,6 +25,10 @@ function moveBox(obj,attr,speed,target,callback){
 
   function getStyle(obj,name){
     if(window.getComputedStyle){
+      //getComputedStyle() gives the final used values of all the CSS properties of an element.
+      //read only, cannot be revised
+      //getComputedStyle(element,psuedo)
+      //the other way--getComputedStyle(element,psuedo).getPropertyValue('name') *kebab-case
       return getComputedStyle(obj,null)[name]
     }else{
       //cater for IE 8
