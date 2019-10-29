@@ -35,8 +35,8 @@ function sortColumn(columnName) {
   loadTable(aceData)
 }
 
-function sortNumberColumn(sort,columnName) {
+function sortNumberColumn(sortDirection,columnName) {
   aceData = aceData.sort((a1,a2) => {
-    return sort ? a1[columnName] - a2[columnName]:a2[columnName] - a1[columnName]
+    return sortDirection ? a1[columnName] - a2[columnName]:a2[columnName] - a1[columnName]
   })
 }
