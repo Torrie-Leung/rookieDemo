@@ -11,3 +11,10 @@ th{
   font-weight: bold;
   text-transform: uppercase;
 }
+tr:nth-child(even){
+  background-color: darkseagreen;
+}
+tr:hover{
+  background-color: dodgerblue;
+  color: antiquewhite;
+}
