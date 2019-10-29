@@ -5,7 +5,10 @@ let aceData = [
     {name:'Toad',level:23},
     {name:'Luigi',level:23000}
 ];
-loadTable(aceData);
+window.onload = () => {
+  loadTable(aceData);
+}
+
 function loadTable(aceData) {
   const tableBody = document.getElementById('tableData');
   let dataHtml = '';
