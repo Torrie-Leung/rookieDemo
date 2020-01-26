@@ -21,12 +21,36 @@ TypeWriter.prototype.type = function(){
   //Check if deleting
   if(this.isDeleting){
     //Remove char
-    this.txt = fulltxt.substring(0,this.txt.length + 1)
+    this.txt = fulltxt.substring(0,this.txt.length - 1)
   }else{
     //Add char
     this.txt = fulltxt.substring(0,this.txt.length + 1)
   }
-  setTimeout(() => this.type(),500)
+
+  //Insert txt into element
+  this.txtEle.innerHTML = `<span class="txt">${this.txt}</span>`
+
+  //Initial Type Speed
+  let typeSpeed = 300
+  if(this.isDeleting){
+    typeSpeed /= 2
+  }
+
+  //if word is complete
+  if(!this.isDeleting && this.txt === fulltxt){
+    //Make a pause at end
+    typeSpeed = this.waitTime
+    //Set delete to true
+    this.isDeleting = true
+  }else if(this.isDeleting && this.txt === ""){
+    this.isDeleting = false
+    //Move to the next word
+    this.wordIndex ++
+    //Pause before start typing
+    typeSpeed = 500
+  }
+
+  setTimeout(() => this.type(),typeSpeed)
 }
 //Init on DOM Load
 document.addEventListener('DOMContentLoaded',init)
