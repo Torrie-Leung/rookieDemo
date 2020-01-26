@@ -9,14 +9,17 @@ const TypeWriter = function (txtEle,words,waitTime = 3000) {
 }
 
 //Type Method
-
+TypeWriter.prototype.type = function(){
+  // console.log('hey')
+  setTimeout(() => this.type(),500)
+}
 //Init on DOM Load
 document.addEventListener('DOMContentLoaded',init)
 
 //Init App
 function init() {
   const txtEle = document.querySelector('.txt-type')
-  const words = JSON.parse(txtEle.getAttribute('data-words')) 
+  const words = JSON.parse(txtEle.getAttribute('data-words')); 
   const waitTime = txtEle.getAttribute('data-wait')
   //Init TypeWriter
   new TypeWriter(txtEle,words,waitTime)
