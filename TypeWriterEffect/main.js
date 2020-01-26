@@ -11,6 +11,21 @@ const TypeWriter = function (txtEle,words,waitTime = 3000) {
 //Type Method
 TypeWriter.prototype.type = function(){
   // console.log('hey')
+
+  //Current index of word
+  const current = this.wordIndex % this.words.length
+  //Get full text of current word
+  const fulltxt = this.words[current]
+  // console.log(fulltxt)
+
+  //Check if deleting
+  if(this.isDeleting){
+    //Remove char
+    this.txt = fulltxt.substring(0,this.txt.length + 1)
+  }else{
+    //Add char
+    this.txt = fulltxt.substring(0,this.txt.length + 1)
+  }
   setTimeout(() => this.type(),500)
 }
 //Init on DOM Load
