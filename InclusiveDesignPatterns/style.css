@@ -7,3 +7,11 @@ p{
   font-size: 1rem;
   line-height: 1.5;
 }
+.em{
+  height: 60em;
+}
+@media(max-width: 60em){
+  html{
+    font-size: 80%;
+  }
+}
