@@ -65,7 +65,39 @@ h4{
   font-size: 1.1em;
 }
 /* mobile styles */
+.grid{
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+}
+.site-nav{
+  margin: 0 20px;
+}
+.site-nav ul{
+  display: none;
+}
+.site-nav h1{
+  grid-column: 1/4;
+  grid-row: 1;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--primary);
+}
 
+#welcome{
+  padding: 0 20px 20px 20px;
+}
+.welcome-txt{
+  grid-column: 1/6;
+}
+.welcome-txt a{
+  margin: 20px 0;
+}
+.welcome-img{
+  grid-column: 6/9;
+}
+/* 2 times bigger than welcome-img */
+.welcome-img img{
+  width: 200%; 
+}
 /* small tablet styles */
 @media screen and (min-width: 620px){
 
@@ -86,20 +118,20 @@ h4{
 }
 
 /* grid testing */
-.projects{
+/* .projects{
   display: grid;
   grid-template-columns: repeat(12,1fr);
   gap:10px
 }
 .projects img{
   max-width: 100%;
-}
-.projects a{
+} */
+/* .projects a{
   text-align: center;
-  /* background: gray; */
+  background: gray;
   padding: 20px;
-}
-.projects a:nth-child(1){
+} */
+/* .projects a:nth-child(1){
   grid-column: 2/6;
   grid-row: 1;
 }
@@ -110,4 +142,4 @@ h4{
 .projects a:nth-child(3){
   grid-column: 5/9;
   grid-row: 2;
-}
+} */
