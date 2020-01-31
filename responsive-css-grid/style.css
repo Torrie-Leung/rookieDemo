@@ -68,6 +68,7 @@ h4{
 .grid{
   display: grid;
   grid-template-columns: repeat(8,1fr);
+  gap:10px;
 }
 .site-nav{
   margin: 0 20px;
@@ -117,6 +118,70 @@ h4{
 }
 .projects h4{
   color: #9994f7;
+}
+#skills{
+  padding: 30px 20px;
+  background: #07083E;
+}
+#skills h3{
+  text-align: center;
+}
+#skills ul{
+  margin: 40px 0;
+}
+#skills li{
+  padding: 40px;
+  background: rgba(0,0,0,.2);
+  grid-column: span 4;
+  text-align: center;
+}
+#skills img{
+  height: 80px;
+  margin: 10px auto;
+}
+#contact{
+  padding: 30px 20px;
+  background: #080936;
+}
+#contact h3, #contact p{
+  text-align: center;
+  margin-bottom: 0;
+}
+#contact form{
+  width: 80%;
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+#contact input, #contact textarea{
+  width: 100%;
+  margin: 10px 0;
+}
+#contact .button{
+  margin-top: 10px;
+}
+footer{
+  padding: 30px 20px;
+  background-color: #14153D;
+  background-image: url(assets/footer_image.png);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+footer .copyright{
+  grid-column: 1/3;
+  font-size: 0.8em;
+}
+footer .social{
+  grid-column: 7/9;
+  display: flex;
+  justify-content: flex-end;
+}
+footer li{
+  margin: 0 6px;
+}
+footer img{
+  width: 20px;
 }
 /* 2 times bigger than welcome-img */
 .welcome-img img{
