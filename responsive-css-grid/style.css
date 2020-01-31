@@ -94,6 +94,30 @@ h4{
 .welcome-img{
   grid-column: 6/9;
 }
+#portfolio{
+  background: url(assets/square_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 30px 20px;
+}
+#portfolio h3{
+  margin-bottom: 0;
+  text-align: center;
+}
+.projects a{
+  grid-column: 1/9;
+  margin: 20px 0;
+  display: flex;
+}
+.projects a *{
+  margin: 0 20px;
+  max-width: 40%;
+  align-self: center;
+}
+.projects h4{
+  color: #9994f7;
+}
 /* 2 times bigger than welcome-img */
 .welcome-img img{
   width: 200%; 
