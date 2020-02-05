@@ -36,6 +36,21 @@ body{
   grid-row: 5/7;
 }
 #content{
-transform:rotateZ(45deg) scale(0.6);
-transition: all 1.5s linear;
+/* transform:rotateZ(45deg) scale(0.67); */
+/* transition: all 1.5s linear; */
+-webkit-animation: spin 14s infinite linear;
+}
+@-webkit-keyframes spin {
+    0%  {
+      -webkit-transform: rotate(0deg) scale(0.6);
+      
+    }
+    50% {
+      -webkit-transform: rotate(180deg) scale(0.3);
+      
+    } 
+    100% {
+      -webkit-transform: rotate(360deg) scale(0.6);
+      
+    }   
 }
