@@ -13,6 +13,7 @@ body{
 .flex-container{
   display: flex;
   background: #fff;
+  flex-wrap: wrap;
 }
 
 /* the old way */
@@ -23,18 +24,16 @@ body{
 } */
 .box{
   height: 100px;
-  width: 320px;
+  min-width: 200px;
+  flex-grow: 1;
   /* float: left; */
 }
 .one{
   background: rebeccapurple;
-  flex-shrink: 1;
 }
 .two{
   background: rgb(114, 153, 51);
-  flex-shrink: 2;
 }
 .three{
   background: rgb(184, 137, 68);
-  flex-shrink: 3;
 }
