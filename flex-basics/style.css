@@ -28,10 +28,13 @@ body{
 }
 .one{
   background: rebeccapurple;
+  flex-grow: 2;
 }
 .two{
   background: rgb(114, 153, 51);
+  flex-grow: 5;
 }
 .three{
   background: rgb(184, 137, 68);
+  flex-grow: 5;
 }
