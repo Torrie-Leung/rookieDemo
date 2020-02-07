@@ -7,7 +7,7 @@ body{
 }
 .wrapper{
   width: 100%;
-  max-width: 960px;
+  max-width: 1980px;
   margin: 0 auto; 
 }
 .flex-container{
@@ -24,16 +24,20 @@ body{
 } */
 .box{
   height: 100px;
-  min-width: 200px;
-  flex-grow: 1;
+  /* flex-basis: 600px; */
+  flex:1 0 600px;
+  /* min-width: 500px; */
   /* float: left; */
 }
 .one{
   background: rebeccapurple;
+  /* flex-basis: 100px; */
 }
 .two{
   background: rgb(114, 153, 51);
+  /* flex-basis: 200px; */
 }
 .three{
   background: rgb(184, 137, 68);
+  /* flex-basis: 300px; */
 }
