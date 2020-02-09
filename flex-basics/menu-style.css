@@ -46,6 +46,23 @@ a.fb{
   max-width: 80px;
   margin: 0 auto;
 }
+
+/* grid vs flex base styles */
+#block{
+  margin: 20px;
+  
+}
+article{
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+article h2{
+  text-align: center;
+  margin: 10px 0;
+  font-size: 20px;
+}
 nav ul.social{
   flex:1 1 0;
   display: flex;
@@ -69,5 +86,13 @@ nav ul.social li{
   }
   .social{
     margin: 0;
+  }
+  #block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  article{
+    flex:0 1 32%
   }
 }
