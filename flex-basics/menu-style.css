@@ -48,6 +48,10 @@ a.fb{
 }
 
 /* grid vs flex base styles */
+#choices{
+  margin: 20px;
+  display: none;
+}
 #block{
   margin: 20px;
   
@@ -87,12 +91,19 @@ nav ul.social li{
   .social{
     margin: 0;
   }
+  #choices{
+    display: block;
+  }
   #block{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
   article{
-    flex:0 1 32%
+    flex:0 1 32%;
+    transition: flex-basis 0.4s linear;
+  }
+  article.stack{
+    flex:0 1 100%;
   }
 }
