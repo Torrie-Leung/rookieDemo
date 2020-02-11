@@ -18,14 +18,14 @@ body{
   background: #ccc;
 }
 .one{
-  order:4
+  order:0
 }
 .two{
-  order:0
+  order:3
 }
 .three{
-  order:0
+  order:2
 }
 .four{
-  order:0
+  order:3
 }
