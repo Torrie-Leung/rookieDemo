@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    input[type=checkbox] + label{
+      display: block;
+      margin: 0.2em;
+    }
+    input[type=checkbox]{
+      display: none;
+    }
+    input[type=checkbox] + label:before{
+      content: '\2714';
+      border: 0.1em solid #000;
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      padding: 0 0 0.3em 0.2em;
+      margin-right: 0.2em;
+      vertical-align: bottom;
+      color: transparent;
+      transition: .2s;
+    }
+    input[type=checkbox]:checked + label:before{
+      background-color: mediumaquamarine;
+      border-color: mediumaquamarine;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <form action="">
+    <input type="checkbox" name="plan-1" id="plan1" value="quit">
+    <label for="plan1">quit</label>
+    <input type="checkbox" name="plan-2" id="plan2" value="lean on">
+    <label for="plan2">lean on</label>
+    <input type="checkbox" name="plan-3" id="plan3" value="hide">
+    <label for="plan3">hide</label>
+    <input type="checkbox" name="plan-4" id="plan4" value="attack">
+    <label for="plan4">attack</label>
+  </form>
+</body>
+</html>
