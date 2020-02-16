@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Document</title>
   <style>
-    input[type=text]{
+    input[type=text],
+    input[type=email]{
       width: 100%;
       margin:0 8px;
       padding: 8px;
@@ -16,13 +18,70 @@
       box-sizing: border-box;
       transition: .3s;
     }
-    input[type=text]:focus{
+    input[type=text]:focus,input[type=email]:focus{
       border-color:dodgerblue;
       box-shadow: 0 0 8px dodgerblue;
+    }
+    .inputWithIcon input[type=text],
+    .inputWithIcon input[type=email],
+    .inputWithIcon input[type=number]{
+      padding-left: 40px;
+    }
+    .inputWithIcon{
+      position: relative;
+      margin: 8px;
+    }
+    .inputWithIcon i{
+      position: absolute;
+      top: 0;
+      left: 8px;
+      padding: 9px 8px;
+      color: #aaa;
+      transition: .3s;
+    }
+    .inputWithIcon input[type=text]:focus + i,
+    .inputWithIcon input[type=email]:focus + i{
+      color: dodgerblue;
+    }
+    .inputWithIcon.inputIconBg i{
+      background-color: #aaa;
+      color: #fff;
+      padding: 9px 5px;
+      border-radius: 4px 0 0 4px;
+    }
+    .inputWithIcon.inputIconBg input[type=text]:focus + i,
+    .inputWithIcon.inputIconBg input[type=email]:focus + i{
+      background-color: dodgerblue;
+      color: #fff;
     }
   </style>
 </head>
 <body>
-  <input type="text" placeholder="Your Name">
+  <div class="inputWithIcon">
+    <input type="text" placeholder="Your Name">
+    <i class="fa fa-user fa-lg fa-fw"></i>
+  </div>
+  <div class="inputWithIcon">
+    <input type="email" placeholder="Your Email">
+    <i class="fa fa-envelope fa-lg fa-fw"></i>
+  </div>
+  <div class="inputWithIcon">
+    <input type="text" placeholder="Your Phone Number">
+    <i class="fa fa-phone fa-lg fa-fw"></i>
+  </div>
+
+    <div class="inputWithIcon inputIconBg">
+    <input type="text" placeholder="Your Name">
+    <i class="fa fa-user fa-lg fa-fw"></i>
+  </div>
+  <div class="inputWithIcon inputIconBg">
+    <input type="email" placeholder="Your Email">
+    <i class="fa fa-envelope fa-lg fa-fw"></i>
+  </div>
+  <div class="inputWithIcon inputIconBg">
+    <input type="text" placeholder="Your Phone Number">
+    <i class="fa fa-phone fa-lg fa-fw"></i>
+  </div>
+  
 </body>
 </html>
