@@ -30,15 +30,24 @@
       border-color: mediumaquamarine;
       color: #fff;
     }
+    input[type=checkbox]:disabled + label:before{
+      transform: scale(1);
+      border-color: #aaa;
+    }
+    input[type=checkbox]:checked:disabled + label:before{
+      transform: scale(1);
+      background-color: #bfb;
+      border-color:  #bfb;;
+    }
   </style>
 </head>
 <body>
   <form action="">
     <input type="checkbox" name="plan-1" id="plan1" value="quit">
     <label for="plan1">quit</label>
-    <input type="checkbox" name="plan-2" id="plan2" value="lean on">
+    <input type="checkbox" name="plan-2" id="plan2" value="lean on" disabled>
     <label for="plan2">lean on</label>
-    <input type="checkbox" name="plan-3" id="plan3" value="hide">
+    <input type="checkbox" name="plan-3" id="plan3" value="hide" disabled checked>
     <label for="plan3">hide</label>
     <input type="checkbox" name="plan-4" id="plan4" value="attack">
     <label for="plan4">attack</label>
