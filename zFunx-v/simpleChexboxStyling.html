@@ -25,6 +25,9 @@
       color: transparent;
       transition: .2s;
     }
+    input[type=checkbox] + label:active:before {
+      transform: scale(0);
+    }
     input[type=checkbox]:checked + label:before{
       background-color: mediumaquamarine;
       border-color: mediumaquamarine;

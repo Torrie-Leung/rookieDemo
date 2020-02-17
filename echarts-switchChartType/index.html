@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="echarts-all-english-v2.js"></script>
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px; 
+      color: #000;
+    }
+
+    a:link, a:visited {
+      color: #4682b4;
+    }
+
+    a:hover {
+      color: #4169e1;
+    }
+    input{
+      width: 5%;
+      margin-left: 18%;
+    }
+    #main	{
+      width: 1200px;
+      height: 600px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" name="second" id="second" placeholder="默认10s">
+  <label for="second">输入刷新间隔(秒）</label>
+  <div id="main"></div>
+  <script src="app.js">
+  </script>
+</body>
+</html>
