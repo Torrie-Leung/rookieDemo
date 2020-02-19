@@ -1,0 +1,18 @@
+blue = #2D7586
+grey = #eee
+cf()
+    zoom 1
+    &:after
+    &:before
+        content ""
+        display table
+    &:after
+        clear both
+
+body
+    background blue
+    color grey
+    border 1px solid @color 
+    main 
+        color: grey
+        cf()

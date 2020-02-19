@@ -1,0 +1,17 @@
+body {
+  background: #2d7586;
+  color: #eee;
+  border: 1px solid #eee;
+}
+body main {
+  color: #eee;
+  zoom: 1;
+}
+body main:after,
+body main:before {
+  content: "";
+  display: table;
+}
+body main:after {
+  clear: both;
+}
