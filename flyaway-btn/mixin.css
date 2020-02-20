@@ -4,7 +4,7 @@ body {
   border: 1px solid #eee;
   margin-left: -10px;
 }
-body main {
+body .main {
   color: #eee;
   margin-left: 10px;
   margin: 10px 30px;
@@ -14,11 +14,14 @@ body main {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
 }
-body main:after,
-body main:before {
+body .main:after,
+body .main:before {
   content: "";
   display: table;
 }
-body main:after {
+body .main:after {
   clear: both;
+}
+body .main .top {
+  margin-top: 10px;
 }
