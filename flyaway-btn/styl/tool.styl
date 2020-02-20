@@ -9,3 +9,11 @@ cf()
 
 marg(a)
         return a a*3
+
+vendor(property,arg)
+        {property} arg
+        -webkit-{property} arg 
+        -moz-{property} arg 
+
+transition(args)
+        vendor('transition',args)
