@@ -1,0 +1,13 @@
+/* import google font */
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans);
+
+/* reset */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* styling */
+.container{
+  display: flex;
+}
