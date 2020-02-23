@@ -10,4 +10,124 @@
 /* styling */
 .container{
   display: flex;
+  height: 100vh;
+  background-color: #f4f4f4;
+  color: #a2a2a2;
+  font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+}
+
+.tabs-container{
+  width: 540px;
+  max-width: 620px;
+  min-width: 420px;
+  margin: auto;
+}
+
+/* tab style */
+.tabs{
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+.tabs a{
+  cursor: pointer;
+  padding: 12px 24px;
+  width: 120px;
+  text-align: center;
+  border-radius: 18px;
+  transition: background 0.2s,color 0.2s;
+  background: linear-gradient(120deg, #ffffff, #dcdcdc);
+  box-shadow: 3px 3px 5px #bebebe,
+              -3px -3px 5px #ffffff;
+}
+/* tabs on hover */
+.tabs a:hover{
+  background: linear-gradient(120deg,#f4f4f4,#cecece);
+  color: #888;
+}
+
+/* active tab */
+.tabs a.active{
+  background: #f4f4f4;
+  color: #bdbdbd;
+  cursor: default;
+  padding: 14px 22px 10px 26px;
+  box-shadow: inset 3px 3px 5px #cbcbcb,
+              inset -3px -3px 5px #ffffff;
+}
+
+.tabContent{
+  padding: 46px;
+  min-height: 300px;
+  border-radius: 18px;
+  background: #f4f4f4;
+  box-shadow: 3px 3px 6px #bebebe,
+              -3px -3px 6px #ffffff;
+  display: none;
+}
+.content .active {
+  display: block;
+}
+.tabContent p{
+  margin-bottom: 15px;
+}
+.tabContent p:last-child{
+  margin-bottom: 0;
+}
+
+/* mode switch style */
+.dark-mode-switch{
+  position: absolute;
+  top:16px;
+  right: 16px;
+}
+.switch-label{
+  font-size: 0.85em;
+}
+.switch{
+  position: relative;
+  display:inline-block;
+  width: 44px;
+  height: 22px;
+}
+
+/* hide the default checkbox */
+.switch input{
+  width: 0;
+  height: 0;
+  opacity:0
+}
+
+.slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1A1B1F;
+  box-shadow:  2px 2px 3px #ffffff, 
+                 -2px -2px 3px #bebebe;
+}
+.slider::after{
+  position: absolute;
+  content: '';
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  bottom: 2px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  background: #9294b8;
+}
+input:checked + .slider {
+  background-color: #f4f4f4;
+}
+input:checked + .slider::after {
+  transform: translateX(21px);
+}
+.slider.round {
+    border-radius: 11px;
+}
+.slider.round::after{
+  border-radius: 50%;
 }
