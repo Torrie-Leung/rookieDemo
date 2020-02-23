@@ -24,8 +24,15 @@ window.onload = function(){
     })
   })
 
+  darkModeSwitch.addEventListener('change',() => {
+    document.querySelector('body').classList.toggle('darkmode')
+    localStorage.setItem('jstabs-darkmode',JSON.stringify(!darkmode))
+  })
+
+  let darkmode = JSON.parse(localStorage.getItem('jstabs-darkmode'))
   const openTab = JSON.parse(localStorage.getItem('jstabs-opentab')|| '1')
   activateTab(openTab)
+  // console.log(JSON.stringify(!darkmode))
   // tabs.forEach(tab =>{
   //   console.log(tab.dataset.tab)
   // })
