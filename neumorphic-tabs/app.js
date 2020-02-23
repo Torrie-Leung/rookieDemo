@@ -28,9 +28,17 @@ window.onload = function(){
     document.querySelector('body').classList.toggle('darkmode')
     localStorage.setItem('jstabs-darkmode',JSON.stringify(!darkmode))
   })
-
+  // retrive & store data
   let darkmode = JSON.parse(localStorage.getItem('jstabs-darkmode'))
   const openTab = JSON.parse(localStorage.getItem('jstabs-opentab')|| '1')
+  
+  if (darkmode === null) {
+    darkmode = window.matchMedia("(prefers-color-scheme: dark)").matches // match to OS theme
+  }
+  if (darkmode) {
+      document.querySelector('body').classList.add('darkmode')
+      document.querySelector('#dark-mode-switch').checked = 'checked'
+  }
   activateTab(openTab)
   // console.log(JSON.stringify(!darkmode))
   // tabs.forEach(tab =>{
