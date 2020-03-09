@@ -9,10 +9,17 @@ header .navbar {
 header .navbar .logo {
   color: #16a085;
   font-weight: bold;
+  margin-right: 20px;
 }
 header .navbar .collapse {
   display: flex;
+  flex-grow: 1;
 }
 header .navbar .collapse .links {
   display: flex;
+  margin-right: auto;
+}
+header .navbar .collapse .links a {
+  color: #777;
+  margin: 0 10px;
 }
