@@ -1,3 +1,18 @@
-header{
+header {
   border-bottom: 5px solid greenyellow;
+}
+header .navbar {
+  display: flex;
+  height: 60px;
+  align-items: center;
+}
+header .navbar .logo {
+  color: #16a085;
+  font-weight: bold;
+}
+header .navbar .collapse {
+  display: flex;
+}
+header .navbar .collapse .links {
+  display: flex;
 }
