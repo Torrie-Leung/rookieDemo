@@ -20,8 +20,35 @@ header{
         a{
           color:#777;
           margin: 0 10px;
+          &:hover{
+            color: #333;
+          }
         }
       }
+    }
+    .logIn{
+      a{
+        border: 1px solid #16a085;
+        border-radius: 0.3rem;
+        padding: 0.3rem;
+        color: #16a085;
+        &.register{
+          color: #fff;
+          background: #16a085;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width:960px){
+  header{
+    .container{
+      margin: 0 auto;
+      .navbar{
+      .collapse, .logIn{
+        display: none;
+      }
+    }
     }
   }
 }

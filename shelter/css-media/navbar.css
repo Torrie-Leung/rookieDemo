@@ -25,3 +25,25 @@ header .navbar .collapse .links a {
   color: #777;
   margin: 0 10px;
 }
+header .navbar .collapse .links a:hover {
+  color: #333;
+}
+header .navbar .logIn a {
+  border: 1px solid #16a085;
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  color: #16a085;
+}
+header .navbar .logIn a.register {
+  color: #fff;
+  background: #16a085;
+}
+@media only screen and (max-width: 960px) {
+  header .container {
+    margin: 0 auto;
+  }
+  header .container .navbar .collapse,
+  header .container .navbar .logIn {
+    display: none;
+  }
+}
