@@ -25,6 +25,9 @@ h1{
   transform: translateX(-50%);
   white-space: nowrap;
 }
+.right h1{
+  color: #d2b965;
+}
 .btn{
   display: block;
   position: absolute;
@@ -36,10 +39,15 @@ h1{
   text-align: center;
   color: #fff;
   border: #fff solid 0.2rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
   font-weight: bold;
   text-decoration: none;
   transform: translateX(-50%);
+}
+.right .btn{
+  color: rgba(92,92,92,.7);
+  border-color: rgba(92,92,92,.3);
 }
 .container{
   position: relative;
@@ -115,4 +123,23 @@ h1{
 .split.right .btn:hover{
   background-color: var(--right-btn-hover);
   border-color: var(--right-btn-hover);
+}
+
+@media(max-width:800px){
+  h1{
+    font-size: 2rem;
+  }
+  .btn{
+    width: 12rem;
+  }
+}
+@media(max-width:700px){
+  h1{
+    top: 30%;
+  }
+  .btn{
+    width: 10rem;
+    font-size: 0.98rem;
+    top: 70%;
+  }
 }
