@@ -3,5 +3,5 @@ function repairZero(val){
 }
 let date = new Date()
 let str = ``
-str += date.getFullYear()
+str += `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()} ${date.getHours()}:${repairZero(date.getMinutes())}:${repairZero(date.getSeconds())}`
 console.log(str)
