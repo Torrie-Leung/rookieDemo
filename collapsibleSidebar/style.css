@@ -122,3 +122,30 @@ body{
   font-size: 14px;
   border-radius: 50%;
 }
+.wrapper .main_container{
+  padding: 20px;
+  margin-left: 100px;
+}
+.wrapper .main_container .title{
+  font-family: "Mountains of Christmas", cursive;
+  margin-bottom: 20px;
+  background: #212890;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 30px;
+}
+.wrapper .main_container .content{
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.125);
+  line-height: 20px;
+}
+
+@media (max-height: 500px){
+  .social_share,.icons{
+    display: none !important;
+  }
+}
