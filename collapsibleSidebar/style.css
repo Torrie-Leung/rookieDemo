@@ -58,3 +58,67 @@ body{
 .wrapper .side_bar .menu ul li a.active:before{
   opacity: 1;
 }
+.wrapper .side_bar .menu ul li a .icon{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  background: linear-gradient(to bottom,#4f51a4, #7f7dc6);
+}
+.social_share{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to top,#ff9f1d,#ffc30d);
+  width: 50px;
+  height: 50px;
+  line-height: 55px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.wrapper .side_bar .icons{
+  position: absolute;
+  bottom: 20px;
+  left: 76px;
+  width: 245px;
+  height: 50px;
+  background: #212890;
+  border-radius: 5px;
+  padding: 10px 10px 10px 50px;
+  display: none;
+}
+.wrapper .side_bar .icons::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 17px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.wrapper .side_bar .icons.active{
+  display:block;
+}
+
+.wrapper .side_bar .icons ul{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .side_bar .icons ul li{
+  width: 30px;
+  height: 30px;
+  line-height: 35px;
+  background: #ffd20b;
+  text-align: center;
+  margin: 0 5px;
+  font-size: 14px;
+  border-radius: 50%;
+}
