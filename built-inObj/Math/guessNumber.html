@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="myMath.js"></script>
+  <title>come and guess</title>
+</head>
+<body>
+  
+  <script>
+    const randomN = myMath.randomNum(1,13)
+    let counter = 3
+    while(true){
+      const num = prompt('Grab a number between 1~13.')
+      counter --
+      if(counter > 0){
+        if(num > randomN){
+          alert(`a bit over! You still have ${counter} chances` )
+        }else if(num < randomN){
+          alert(`a bit below! You still have ${counter} chances`)
+        }else{
+          alert('Hooray~ You got this!!')
+          break
+        }
+      }else{
+        alert('oops, game over~')
+        break
+      }
+      
+    }
+  </script>
+</body>
+</html>
