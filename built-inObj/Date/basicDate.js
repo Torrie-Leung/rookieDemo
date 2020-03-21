@@ -30,3 +30,4 @@ function getTimer(){
 }
 console.log(getTimer());
 console.log(date3);
+console.log(Date.now());// timestamp
