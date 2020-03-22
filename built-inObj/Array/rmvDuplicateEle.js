@@ -13,3 +13,5 @@ function uniqueEle(originalArr){
 }
 let uniqueArr = uniqueEle(arr)
 console.log(uniqueArr);
+console.log(arr.toString());
+console.log(arr.join('-'));
