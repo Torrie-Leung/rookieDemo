@@ -17,3 +17,25 @@ for(let i = 0; i<str.length;i++){
   console.log(str.charAt(i))
 }
 console.log(str.charCodeAt(0)) // 99
+
+let o = {}
+for(let i = 0; i < phrase.length; i ++){
+  let chars = phrase.charAt(i)
+  if(o[chars]){
+    o[chars] ++
+  } else {
+    o[chars] = 1
+  }
+}
+// console.log(o)
+let max = 0
+let cha = ''
+for(let k in o){
+  if(k !== ' '){
+    if(o[k] > max){
+      cha = k
+    }
+  }
+}
+console.log(max);
+console.log(cha);
