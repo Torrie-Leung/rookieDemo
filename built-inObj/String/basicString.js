@@ -12,3 +12,8 @@ while(idx !== -1){
   idx = phrase.indexOf('c',idx+1)
 }
 console.log(`c in phrase appears ${num} times`);
+console.log(str.charAt(3)); // m
+for(let i = 0; i<str.length;i++){
+  console.log(str.charAt(i))
+}
+console.log(str.charCodeAt(0)) // 99
