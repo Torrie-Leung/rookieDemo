@@ -23,9 +23,18 @@ ul li{
   border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
+.activeli{
+  border-bottom: none;
+}
 .addTab span{
   display: inline-block;
   width: 20px;
   border: 1px solid khaki;
   text-align: center;
+}
+.tabsContent section{
+  display: none;
+}
+.tabsContent .activeContent{
+  display: block;
 }
