@@ -1,9 +1,11 @@
+// class has no hoisting thing
 class Beverage{
   constructor(num,price){
     this.num = num
     this.price = price
   }
   bill(){
+    console.log(this.num*this.price)
     return this.num*this.price
   }
 }
@@ -12,15 +14,15 @@ class Vita extends Beverage{
     super(num,price)
     this.num = num
     this.price = price
+    this.bill()
+    this.bargain(this.bill())
+    this.cheat()
   }
   bargain(bill){
-    return bill*0.8
+    console.log(bill*0.8) 
   }
   cheat(){
-    return this.num*this.price*1.2
+    console.log(this.num*this.price*1.2); 
   }
 }
 let vitaLemmon = new Vita(6,1.65)
-console.log(vitaLemmon.bill());
-console.log(vitaLemmon.bargain(vitaLemmon.bill()));
-console.log(vitaLemmon.cheat());
