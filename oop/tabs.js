@@ -2,8 +2,7 @@ let that
 class Tabs{
   constructor(id){
     this.main = document.querySelector(id)
-    this.lis = this.main.querySelectorAll('li')
-    this.sections = this.main.querySelectorAll('section')
+    
     this.add = this.main.querySelector('.addTab')
     this.ul = this.main.querySelector('.Navi ul:first-child')
     this.fsec = this.main.querySelector('.tabsContent')
@@ -11,7 +10,12 @@ class Tabs{
     that = this
     
   }
+  updateNode(){
+    this.lis = this.main.querySelectorAll('li')
+    this.sections = this.main.querySelectorAll('section')
+  }
   init(){
+    this.updateNode()
     for(let i = 0; i < this.lis.length; i++){
       this.lis[i].index = i
       this.lis[i].onclick = this.toggleTab
@@ -31,12 +35,14 @@ class Tabs{
     }
   }
   addTab(){
+    that.clearClass()
     //create el
-    let li = '<li><span>new tab</span></li>'
+    let li = '<li class="activeli"><span>new tab</span></li>'
     let section = '<section class="activeContent">new content</section>'
+    // insert el to parent el
     that.ul.insertAdjacentHTML('beforeend',li)
     that.fsec.insertAdjacentHTML('beforeend',section)
-    // insert el to parent el
+    that.init()
 
   }
   rmvTab(){}
