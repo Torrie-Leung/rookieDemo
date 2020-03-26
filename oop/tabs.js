@@ -37,7 +37,7 @@ class Tabs{
   addTab(){
     that.clearClass()
     //create el
-    let li = '<li class="activeli"><span>new tab</span></li>'
+    let li = '<li class="activeli"><span>new tab</span><span class="delBtn">✖️</span></li>'
     let section = '<section class="activeContent">new content</section>'
     // insert el to parent el
     that.ul.insertAdjacentHTML('beforeend',li)

@@ -22,12 +22,19 @@ ul {
   list-style: none;
 }
 ul li{
+  position: relative;
   flex-basis: 100px;
   border-right: 2px solid #eee;
   border-bottom: 2px solid #eee;
 }
 .activeli{
   border-bottom: none;
+}
+.delBtn{
+    position: absolute;
+    right: 0;
+    top:-3px;
+    font-size: 12px;
 }
 .addTab{
   flex-basis: 20px;
