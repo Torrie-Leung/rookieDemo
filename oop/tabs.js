@@ -56,7 +56,7 @@ class Tabs{
     that.sections[idx].remove()
     that.init()
     idx--
-    that.lis[idx].click()
+    that.lis[idx]  && that.lis[idx].click()
   }
   editTab(){}
 }
