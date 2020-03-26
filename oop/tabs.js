@@ -55,6 +55,7 @@ class Tabs{
     that.lis[idx].remove()
     that.sections[idx].remove()
     that.init()
+    if(document.querySelector('.activeli')) return
     idx--
     that.lis[idx]  && that.lis[idx].click()
   }
