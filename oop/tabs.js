@@ -2,7 +2,7 @@ let that
 class Tabs{
   constructor(id){
     this.main = document.querySelector(id)
-    
+    this.rmv = this.main.querySelectorAll('.delBtn')
     this.add = this.main.querySelector('.addTab')
     this.ul = this.main.querySelector('.Navi ul:first-child')
     this.fsec = this.main.querySelector('.tabsContent')
@@ -19,6 +19,8 @@ class Tabs{
     for(let i = 0; i < this.lis.length; i++){
       this.lis[i].index = i
       this.lis[i].onclick = this.toggleTab
+      console.log(this.rmv[i]);
+      // this.rmv[i].onclick = this.rmvTab
     }
     this.add.onclick = this.addTab
   }
@@ -45,7 +47,10 @@ class Tabs{
     that.init()
 
   }
-  rmvTab(){}
+  rmvTab(){
+    let idx = this.parentNode.index
+    console.log(idx);
+  }
   editTab(){}
 }
 

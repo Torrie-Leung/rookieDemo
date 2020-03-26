@@ -36,6 +36,9 @@ ul li{
     top:-3px;
     font-size: 12px;
 }
+.delBtn:hover{
+  cursor: pointer;
+}
 .addTab{
   flex-basis: 20px;
 }
