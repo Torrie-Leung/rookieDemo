@@ -19,13 +19,12 @@ class Tabs{
     for(let i = 0; i < this.lis.length; i++){
       this.lis[i].index = i
       this.lis[i].onclick = this.toggleTab
-      console.log(this.rmv[i]);
-      // this.rmv[i].onclick = this.rmvTab
+      this.rmv[i].onclick = this.rmvTab
     }
     this.add.onclick = this.addTab
   }
   toggleTab(){
-    console.log(this.index);
+    // console.log(this.index);
     that.clearClass()
     this.className = 'activeli'
     that.sections[this.index].className = 'activeContent'
@@ -47,7 +46,8 @@ class Tabs{
     that.init()
 
   }
-  rmvTab(){
+  rmvTab(e){
+    e.stopPropagation()
     let idx = this.parentNode.index
     console.log(idx);
   }
