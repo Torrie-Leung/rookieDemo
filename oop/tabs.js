@@ -45,6 +45,7 @@ class Tabs{
     that.ul.insertAdjacentHTML('beforeend',li)
     that.fsec.insertAdjacentHTML('beforeend',section)
     that.init()
+    
 
   }
   rmvTab(e){
@@ -52,7 +53,10 @@ class Tabs{
     let idx = this.parentNode.index
     console.log(idx);
     that.lis[idx].remove()
+    that.sections[idx].remove()
     that.init()
+    idx--
+    that.lis[idx].click()
   }
   editTab(){}
 }
