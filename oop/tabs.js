@@ -2,7 +2,7 @@ let that
 class Tabs{
   constructor(id){
     this.main = document.querySelector(id)
-    this.rmv = this.main.querySelectorAll('.delBtn')
+    
     this.add = this.main.querySelector('.addTab')
     this.ul = this.main.querySelector('.Navi ul:first-child')
     this.fsec = this.main.querySelector('.tabsContent')
@@ -13,6 +13,7 @@ class Tabs{
   updateNode(){
     this.lis = this.main.querySelectorAll('li')
     this.sections = this.main.querySelectorAll('section')
+    this.rmv = this.main.querySelectorAll('.delBtn')
   }
   init(){
     this.updateNode()
@@ -50,6 +51,8 @@ class Tabs{
     e.stopPropagation()
     let idx = this.parentNode.index
     console.log(idx);
+    that.lis[idx].remove()
+    that.init()
   }
   editTab(){}
 }
