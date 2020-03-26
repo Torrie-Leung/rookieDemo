@@ -12,6 +12,9 @@
 .Navi{
   display: flex;
   justify-content: flex-start;
+  border-top: 2px solid #eee;
+  border-right: 2px solid #eee;
+  border-left: 2px solid #eee;
 }
 ul {
   display: flex;
@@ -20,13 +23,18 @@ ul {
 }
 ul li{
   flex-basis: 100px;
-  border-right: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border-right: 2px solid #eee;
+  border-bottom: 2px solid #eee;
 }
 .activeli{
   border-bottom: none;
 }
+.addTab{
+  flex-basis: 20px;
+}
 .addTab span{
+  position: absolute;
+  right: 4px;
   display: inline-block;
   width: 20px;
   border: 1px solid khaki;
