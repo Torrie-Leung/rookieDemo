@@ -6,6 +6,7 @@ class Tabs{
     this.sections = this.main.querySelectorAll('section')
     this.add = this.main.querySelector('.addTab')
     this.ul = this.main.querySelector('.Navi ul:first-child')
+    this.fsec = this.main.querySelector('.tabsContent')
     this.init()
     that = this
     
@@ -31,8 +32,10 @@ class Tabs{
   }
   addTab(){
     //create el
-    let li = '<li><span>3</span></li>'
+    let li = '<li><span>new tab</span></li>'
+    let section = '<section class="activeContent">new content</section>'
     that.ul.insertAdjacentHTML('beforeend',li)
+    that.fsec.insertAdjacentHTML('beforeend',section)
     // insert el to parent el
 
   }
