@@ -73,6 +73,12 @@ class Tabs{
     input.onblur = function(){
       input.parentNode.innerHTML = this.value
     }
+    input.onkeyup = function(e){
+      if(e.keyCode === 13){
+        // call form's losing blur event
+        this.blur()
+      }
+    }
   }
 }
 
