@@ -14,6 +14,7 @@ class Tabs{
     this.lis = this.main.querySelectorAll('li')
     this.sections = this.main.querySelectorAll('section')
     this.rmv = this.main.querySelectorAll('.delBtn')
+    this.spans = this.main.querySelectorAll('.Navi li span:first-child')
   }
   init(){
     this.updateNode()
@@ -21,6 +22,7 @@ class Tabs{
       this.lis[i].index = i
       this.lis[i].onclick = this.toggleTab
       this.rmv[i].onclick = this.rmvTab
+      this.spans[i].ondblclick = this.editTab
     }
     this.add.onclick = this.addTab
   }
@@ -59,7 +61,11 @@ class Tabs{
     idx--
     that.lis[idx]  && that.lis[idx].click()
   }
-  editTab(){}
+  editTab(){
+    // forbid text being selected while dbclick
+    window.getSelection ? window.getSelection().removeAllRanges() : document.getSelection.empty()
+    this.innerHTML = '<input type="text" />'
+  }
 }
 
 new Tabs('#tabs')

@@ -30,6 +30,10 @@ ul li{
 .activeli{
   border-bottom: none;
 }
+.activeli span:first-child{
+  display: inline-block;
+  width: 100%;
+}
 .delBtn{
     position: absolute;
     right: 0;
