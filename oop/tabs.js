@@ -62,9 +62,12 @@ class Tabs{
     that.lis[idx]  && that.lis[idx].click()
   }
   editTab(){
+    let str = this.innerHTML
     // forbid text being selected while dbclick
     window.getSelection ? window.getSelection().removeAllRanges() : document.getSelection.empty()
     this.innerHTML = '<input type="text" />'
+    let input = this.children[0]
+    input.value = str
   }
 }
 
