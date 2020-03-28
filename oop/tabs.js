@@ -23,6 +23,7 @@ class Tabs{
       this.lis[i].onclick = this.toggleTab
       this.rmv[i].onclick = this.rmvTab
       this.spans[i].ondblclick = this.editTab
+      this.sections[i].ondblclick = this.editTab
     }
     this.add.onclick = this.addTab
   }
