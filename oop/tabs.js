@@ -68,6 +68,11 @@ class Tabs{
     this.innerHTML = '<input type="text" />'
     let input = this.children[0]
     input.value = str
+    // foucs in input
+    input.select()
+    input.onblur = function(){
+      input.parentNode.innerHTML = this.value
+    }
   }
 }
 
