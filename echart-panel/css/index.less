@@ -27,3 +27,17 @@ header{
     font-size: .25rem;
   }
 }
+.mainBox{
+  display: flex;
+  min-width: 1024px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: .125rem .125rem 0;
+  background: pink;
+  .column{
+    flex:3;
+    &:nth-child(2){
+      flex:5
+    }
+  }
+}
