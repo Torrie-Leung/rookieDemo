@@ -1,7 +1,14 @@
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-DIGIT.TTF);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+li {
+  list-style: none;
 }
 body {
   min-width: 1024px;
@@ -40,6 +47,7 @@ header #showTime {
 }
 .mainBox .column:nth-child(2) {
   flex: 5;
+  margin: 0 10px 15px;
 }
 .mainBox .column .panel {
   position: relative;
@@ -105,4 +113,21 @@ header #showTime {
 }
 .mainBox .column .panel .chart {
   height: 3rem;
+}
+.mainBox .column .data-show {
+  background: rgba(101, 132, 226, 0.1);
+  padding: 0.1875rem;
+}
+.mainBox .column .data-show .data-header {
+  border: 1px solid rgba(25, 186, 139, 0.17);
+}
+.mainBox .column .data-show .data-header ul {
+  display: flex;
+}
+.mainBox .column .data-show .data-header ul li {
+  flex: 1;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #ffeb7b;
+  font-family: electronicFont;
 }
