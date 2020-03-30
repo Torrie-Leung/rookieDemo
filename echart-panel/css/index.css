@@ -57,7 +57,7 @@ header #showTime {
   margin-bottom: 0.1875rem;
   background: url(../images/line\(1\).png) rgba(255, 255, 255, 0.1);
 }
-.mainBox .column .panel:before {
+.mainBox .column .panel::before {
   content: '';
   position: absolute;
   top: 0;
@@ -67,7 +67,7 @@ header #showTime {
   border-left: 2px solid #02a6b5;
   border-top: 2px solid #02a6b5;
 }
-.mainBox .column .panel:after {
+.mainBox .column .panel::after {
   content: '';
   position: absolute;
   top: 0;
@@ -115,8 +115,29 @@ header #showTime {
   height: 3rem;
 }
 .mainBox .column .data-show {
+  position: relative;
   background: rgba(101, 132, 226, 0.1);
   padding: 0.1875rem;
+}
+.mainBox .column .data-show::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 20px;
+  height: 7px;
+  border-left: 2px solid #02a6b5;
+  border-top: 2px solid #02a6b5;
+}
+.mainBox .column .data-show::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 20px;
+  height: 7px;
+  border-right: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
 }
 .mainBox .column .data-show .data-header {
   border: 1px solid rgba(25, 186, 139, 0.17);
@@ -125,9 +146,46 @@ header #showTime {
   display: flex;
 }
 .mainBox .column .data-show .data-header ul li {
+  position: relative;
   flex: 1;
   font-size: 0.875rem;
   line-height: 1rem;
+  text-align: center;
   color: #ffeb7b;
   font-family: electronicFont;
+}
+.mainBox .column .data-show .data-header ul li:first-child::after {
+  content: '';
+  position: absolute;
+  top: 25%;
+  right: 0;
+  height: 50%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.mainBox .column .data-show .data-desc ul {
+  display: flex;
+}
+.mainBox .column .data-show .data-desc ul li {
+  flex: 1;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  font-size: 0.225rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+.mainBox .column .map {
+  position: relative;
+  height: 10.125rem;
+}
+.mainBox .column .map .m1 {
+  position: absolute;
+  width: 6.475rem;
+  height: 6.475rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../images/map.png) no-repeat center;
+  background-size: 100% 100%;
+  opacity: 0.3;
 }
