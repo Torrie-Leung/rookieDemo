@@ -1,0 +1,32 @@
+.container{
+  height: 300px;
+  background: pink;
+  margin: 0 auto;
+}
+/* super small screen width < 768px container width: 100% */
+@media screen and (max-width:768px){
+  .container{
+    width: 100%;
+  }
+}
+
+/* small screen width width >= 768px container width: 750px*/
+@media screen and (min-width:768px){
+  .container{
+    width: 750px;
+  }
+}
+
+/* medium screen */
+@media screen and (min-width: 992px){
+  .container{
+    width: 970px;
+  }
+}
+
+/* big screen*/
+@media screen and (min-width: 1200px){
+  .container{
+    width: 1170px;
+  }
+}
