@@ -201,11 +201,31 @@ header #showTime {
   opacity: 0.5;
   animation: rotate 13s linear infinite;
 }
+.mainBox .column .map .m3 {
+  position: absolute;
+  width: 7.0375rem;
+  height: 7.0375rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../images/jt.png);
+  background-size: 100% 100%;
+  opacity: 0.5;
+  animation: rotateO 10s linear infinite;
+}
 @keyframes rotate {
   from {
     transform: translate(-50%, -50%) rotate();
   }
   to {
     transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes rotateO {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
   }
 }
