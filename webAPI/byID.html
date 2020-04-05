@@ -9,10 +9,22 @@
 <body>
   
   <div id="time">2020-03-23</div>
+  <ul>
+    <li>luigi</li>
+    <li>mario</li>
+    <li>yoshi</li>
+  </ul>
   <script>
     const timer = document.getElementById('time')
     console.log(typeof timer)
     console.dir(timer) // return ele obj
+    const lis = document.getElementsByTagName('li')
+    console.log(lis) // return a pseudo array
+    for(let i = 0; i < lis.length; i++){
+      console.log(lis[i])
+    }
+    const htmlEle = document.documentElement
+    console.dir(htmlEle)
   </script>
 </body>
 </html>
