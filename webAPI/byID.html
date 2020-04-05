@@ -32,13 +32,20 @@
     const alive = document.getElementById('alive')
     function getTimer(){
       const time = new Date()
+      const y = time.getFullYear()
+      let month = time.getMonth() + 1
+      month = month < 10 ? '0'+ month : month
+      let date = time.getDate()
+      date = date < 10 ? '0'+ date : date
+      let day = time.getDay()
+      const weekArr = ['Sun','Mon','Tue','Wed','Thur','Fri','Sat']
       let h = time.getHours()
       h = h < 10 ? '0'+ h : h
       let m = time.getMinutes()
       m = m < 10 ? '0'+ m : m
       let s = time.getSeconds()
       s = s < 10 ? '0'+ s : s
-      return `${h}:${m}:${s}`
+      return `today is ${y}-${month}-${date} ${weekArr[day]} ${h}:${m}:${s}`
     }
     btn.onclick = function(){
       alive.innerText = getTimer()
