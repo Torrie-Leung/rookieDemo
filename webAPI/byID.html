@@ -14,6 +14,8 @@
     <li>mario</li>
     <li>yoshi</li>
   </ul>
+  <button id="btn">hey</button>
+  <div id="alive"></div>
   <script>
     const timer = document.getElementById('time')
     console.log(typeof timer)
@@ -25,6 +27,22 @@
     }
     const htmlEle = document.documentElement
     console.dir(htmlEle)
+
+    const btn = document.getElementById('btn')
+    const alive = document.getElementById('alive')
+    function getTimer(){
+      const time = new Date()
+      let h = time.getHours()
+      h = h < 10 ? '0'+ h : h
+      let m = time.getMinutes()
+      m = m < 10 ? '0'+ m : m
+      let s = time.getSeconds()
+      s = s < 10 ? '0'+ s : s
+      return `${h}:${m}:${s}`
+    }
+    btn.onclick = function(){
+      alive.innerText = getTimer()
+    }
   </script>
 </body>
 </html>
