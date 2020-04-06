@@ -29,13 +29,15 @@
           "金融行业"
         ],
         axisTick: {
-          alignWithLabel: true
+          alignWithLabel: true,
+          show:false
         },
         axisLabel: {
           textStyle: {
             color: "rgba(255,255,255,.6)",
             fontSize: "12"
-          }
+          },
+          interval:0,
         },
         axisLine: {
           show: false
@@ -45,17 +47,22 @@
     yAxis: [
       {
         type: "value",
+        axisTick: {
+          alignWithLabel: true,
+          show:false
+        },
         axisLabel: {
           textStyle: {
             color: "rgba(255,255,255,.6)",
-            fontSize: "12"
+            fontSize: "12",
+            width:1
           }
         },
         axisLine: {
           lineStyle: {
-            color: "rgba(255,255,255,.1)"
-            // width: 1,
-            // type: "solid"
+            color: "rgba(255,255,255,.1)",
+            width: 4,
+            type: "dashed"
           }
         },
         splitLine: {
@@ -69,7 +76,7 @@
       {
         name: "直接访问",
         type: "bar",
-        barWidth: "35%",
+        barWidth: "20%",
         data: [200, 300, 300, 900, 1500, 1200, 600],
         itemStyle: {
           barBorderRadius: 5
@@ -78,6 +85,9 @@
     ]
   }
   myChart.setOption(option)
+  window.addEventListener('resize',function(){
+    myChart.resize()
+  })
 })();
 
 (function(){
