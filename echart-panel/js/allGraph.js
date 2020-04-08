@@ -314,14 +314,14 @@
         stack: "总量",
         // 是否让线条圆滑显示
         smooth: true,
-        data: data.year[0]
+        data: doy[0].data[0]
       },
       {
         name: "新增游客",
         type: "line",
         stack: "总量",
         smooth: true,
-        data: data.year[1]
+        data: doy[1].data[1]
       }
     ]
   };
@@ -335,9 +335,13 @@
   });
 
   // click to toggle data
-  console.log(1);
   $(".line h2").on("click", "a", function(){
-    console.log(1);
+    // console.log(doy[$(this).index()]);
+    let obj = doy[$(this).index()]
+    console.log(obj);
+    option.series[0].data = obj.data[0]
+    option.series[1].data = obj.data[1]
+    myChart.setOption(option);
   })
 })();
 
