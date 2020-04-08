@@ -212,6 +212,23 @@
       [40, 64, 191, 324, 290, 330, 310, 213, 180, 200, 180, 79]
     ]
   };
+  // different data
+  let doy = [
+    {
+      year: '2019',
+      data: [
+        [24, 40, 101, 134, 90, 230, 210, 230, 120, 230, 210, 120],
+        [40, 64, 191, 324, 290, 330, 310, 213, 180, 200, 180, 79]
+      ]
+    },
+    {
+      year: '2020',
+      data: [
+        [4, 20, 51, 34, 190, 130, 10, 23, 120, 230, 110, 110],
+        [10, 64, 11, 224, 210, 230, 110, 213, 130, 20, 180, 59]
+      ]
+    }
+  ]
 
   // 2. 指定配置和数据
   let option = {
@@ -242,7 +259,7 @@
 
     xAxis: {
       type: "category",
-      boundaryGap: false,
+      boundaryGap: true,
       data: [
         "1月",
         "2月",
@@ -285,6 +302,9 @@
         lineStyle: {
           color: "#012f4a"
         }
+      },
+      axisLine:{
+        show:false
       }
     },
     series: [
@@ -313,6 +333,12 @@
   window.addEventListener("resize", function() {
     myChart.resize();
   });
+
+  // click to toggle data
+  console.log(1);
+  $(".line h2").on("click", "a", function(){
+    console.log(1);
+  })
 })();
 
 (function(){
