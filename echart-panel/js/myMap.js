@@ -123,23 +123,24 @@
   var XAData = [
     [{ name: "西安" }, { name: "北京", value: 100 }],
     [{ name: "西安" }, { name: "上海", value: 100 }],
-    [{ name: "西安" }, { name: "广州", value: 100 }],
+    [{ name: "潍坊" }, { name: "广州", value: 100 }],
     [{ name: "西安" }, { name: "西宁", value: 100 }],
-    [{ name: "西安" }, { name: "拉萨", value: 100 }]
+    [{ name: "西安" }, { name: "乌鲁木齐", value: 100 }]
   ];
 
   var XNData = [
     [{ name: "西宁" }, { name: "北京", value: 100 }],
-    [{ name: "西宁" }, { name: "上海", value: 100 }],
-    [{ name: "西宁" }, { name: "广州", value: 100 }],
-    [{ name: "西宁" }, { name: "西安", value: 100 }],
-    [{ name: "西宁" }, { name: "银川", value: 100 }]
+    [{ name: "广州" }, { name: "上海", value: 100 }],
+    [{ name: "西宁" }, { name: "鄂尔多斯", value: 100 }],
+    [{ name: "哈尔滨" }, { name: "西安", value: 100 }],
+    [{ name: "贵阳" }, { name: "银川", value: 100 }]
   ];
 
-  var YCData = [
-    [{ name: "拉萨" }, { name: "北京", value: 100 }],
-    [{ name: "拉萨" }, { name: "潍坊", value: 100 }],
-    [{ name: "拉萨" }, { name: "哈尔滨", value: 100 }]
+  var NNData = [
+    [{ name: "南宁" }, { name: "成都", value: 100 }],
+    [{ name: "南宁" }, { name: "深圳", value: 100 }],
+    [{ name: "南宁" }, { name: "上海", value: 100 }],
+    [{ name: "南宁" }, { name: "鄂尔多斯", value: 100 }],
   ];
 
   var planePath =
@@ -169,7 +170,7 @@
   [
     ["西安", XAData],
     ["西宁", XNData],
-    ["银川", YCData]
+    ["南宁", NNData]
   ].forEach(function(item, i) {
     series.push(
       {
