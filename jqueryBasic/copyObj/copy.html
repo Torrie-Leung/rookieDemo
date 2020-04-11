@@ -36,6 +36,23 @@
       // shallow copy
       console.log(targetObj)
     })
+    // deep
+    $(function(){
+      let targetObj = {id:44}
+      let obj = {
+        id: 001,
+        name: 'Nolan',
+        msg:{
+          todo:'kill a man'
+        }
+      }
+      // $.extend(target,obj)
+      // it will rewrite the original object attr
+      $.extend(true,targetObj,obj)
+      obj.msg.todo = 'follow the Queen'
+      // shallow copy
+      console.log(targetObj)
+    })
   </script>
 </body>
 </html>
