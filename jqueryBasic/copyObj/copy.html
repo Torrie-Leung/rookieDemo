@@ -8,7 +8,9 @@
   <title>Document</title>
 </head>
 <body>
+  <span>no Conflict</span>
   <script>
+    
     $(function(){
       let targetObj = {}
       let obj = {
@@ -50,8 +52,12 @@
       // it will rewrite the original object attr
       $.extend(true,targetObj,obj)
       obj.msg.todo = 'follow the Queen'
+      obj.msg.done= 'coding today'
       // shallow copy
       console.log(targetObj)
+
+      let mine = $.noConflict()
+    console.log(mine('span'))
     })
   </script>
 </body>
