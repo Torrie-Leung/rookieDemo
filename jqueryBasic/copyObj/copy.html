@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../jquery.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    $(function(){
+      let targetObj = {}
+      let obj = {
+        id: 001,
+        name: 'Nolan',
+        
+      }
+      // $.extend(target,obj)
+      $.extend(targetObj,obj)
+      // console.log(targetObj)
+    })
+    $(function(){
+      let targetObj = {id:44}
+      let obj = {
+        id: 001,
+        name: 'Nolan',
+        msg:{
+          todo:'kill a man'
+        }
+      }
+      // $.extend(target,obj)
+      // it will rewrite the original object attr
+      $.extend(targetObj,obj)
+      obj.msg.todo = 'follow the Queen'
+      // shallow copy
+      console.log(targetObj)
+    })
+  </script>
+</body>
+</html>
