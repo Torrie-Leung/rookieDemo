@@ -13,9 +13,13 @@
   <script>
     // method dir() displays an interactive list of the properties of the specified JavaScript object.
     const dom = document.getElementById('dom')
-    const jQ = $('#jQuery')
+    let jQ = $('#jQuery')
     console.dir(dom)
     console.dir(jQ)
+    // jQ.hide()
+    // transform jq obj back to dom obj
+    $(jQ)[0]
+    // $(jQ)[0].hide()
   </script>
 </body>
 </html>
