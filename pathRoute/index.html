@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .path{
+      width: 40px;
+      height: 120px;
+      border: 1px solid palegoldenrod;
+      margin: 0 0 0 20%;
+    }
+    .obj{
+      width: 20px;
+      height: 20px;
+      background: powderblue;
+      border-radius: 50px;
+      
+    }
+    .o1{
+      transform: translate(-50%,-50%);
+      animation: drop 5s linear infinite;
+    }
+    .o2{
+      transform: translate(-50%,300%);
+      animation: shine 5s linear infinite;
+    }
+    .o3{
+      transform: translate(-50%,350%);
+      opacity: 0;
+      animation: shine1 4s  linear infinite;
+      animation-delay: 3s;
+    }
+    @keyframes drop {
+      0%{
+        transform: translate(-50%,-50%);
+        opacity: 1;
+      }
+      75%{
+        opacity: 0.75;
+      }
+      100%{
+        transform: translate(-50%,400%);
+        opacity: 0;
+      }
+    }
+    @keyframes shine {
+      0%{
+        opacity: 0;
+      }
+      80%{
+        opacity: 0.5;
+      }
+      100%{
+        opacity: 1;
+      }
+    }
+    @keyframes shine1 {
+      0%{
+        opacity: 0;
+      }
+      
+      100%{
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="path">
+    <div class="obj o1"></div>
+    <div class="obj o2"></div>
+    <div class="obj o3"></div>
+  </div>
+</body>
+</html>
