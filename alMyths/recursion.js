@@ -24,4 +24,35 @@ function recursiveSumRange(n,total = 0){
   }
   return recursiveSumRange(n-1,total + n)
 }
-recursiveSumRange(3)
+// recursiveSumRange(3)
+
+const tree = {
+  name: 'Clair',
+  children: [
+    {
+      name: 'Haley',
+      children: [
+        {name: 'Poppy',children:[]},
+        {name: 'George',children:[]}
+      ]
+    },
+    {
+      name: 'Alex',
+      children: []
+    },
+    {
+      name: 'Luke',
+      children: []
+    }
+  ]
+}
+function printChildrenRecursive(t){
+  if(t.children.length === 0){
+    return
+  }
+  t.children.forEach(child => {
+    console.log(child.name);
+    printChildrenRecursive(child)
+  });
+}
+printChildrenRecursive(tree)
