@@ -15,4 +15,13 @@ function recursiveCountDown(n){
   console.log(n)
   recursiveCountDown(n-1)
 }
-recursiveCountDown(3)
+// recursiveCountDown(3)
+
+function recursiveSumRange(n,total = 0){
+  if(n <= 0){
+    console.log(total)
+    return
+  }
+  return recursiveSumRange(n-1,total + n)
+}
+recursiveSumRange(3)
