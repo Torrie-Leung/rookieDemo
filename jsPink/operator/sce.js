@@ -15,3 +15,7 @@ console.log(0 || NaN || 456); // 456
 let score = 0;
 console.log(123 || score++);
 console.log(score);
+
+let x = 0 || 1;
+console.log(x); // 1
+console.log(x || 1);
