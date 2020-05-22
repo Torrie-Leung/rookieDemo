@@ -1,5 +1,9 @@
 let sum = 0;
-for(let i = 0; i < 101; i++){
-  sum = sum + i;
+let itemNum = 100;
+let avg = 0;
+for(let i = 0; i <= itemNum; i++){
+  sum += i;
 }
-console.log(sum);
+avg = sum/itemNum;
+console.log({sum});
+console.log({avg});
