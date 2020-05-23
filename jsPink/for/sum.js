@@ -19,3 +19,11 @@ for(let i = 1; i <= itemNum; i++){
 }
 console.log({evenSum:even})
 console.log({oddSum:odd})
+
+let triRes = 0;
+for(let i = 1; i < itemNum; i++){
+  if( i % 3 == 0){
+    triRes += i;
+  }
+}
+console.log({triRes})
