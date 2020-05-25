@@ -14,3 +14,12 @@ for(let i = 1; i <= 100; i++){
   sum += i;
 }
 console.log({sum})
+
+let triS = 0;
+for(let i = 1; i <= 100; i++){
+  if(i == 3 || i % 10 == 3){
+    triS += i;
+    continue;
+  }
+}
+console.log({triS})
