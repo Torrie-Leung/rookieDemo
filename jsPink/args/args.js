@@ -8,3 +8,15 @@ function foo(){
 }
 foo('crap','nosedive')
 foo(3,2,1)
+
+function getMax(){
+  let max = arguments[0];
+  for(let i = 0; i < arguments.length; i++){
+    if(arguments[i] > max){
+      max = arguments[i]
+    }
+  }
+  return max;
+}
+let res = getMax(7,1,4,55,100)
+console.log({max:res});
