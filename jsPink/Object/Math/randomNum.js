@@ -4,3 +4,6 @@ function getRandom(min,max){
 
 let res = getRandom(10,50)
 console.log({res});
+let squad = ['chimp','bender','callum','eddie','louise']
+let idx = getRandom(0,squad.length-1)
+console.log(squad[idx]);
