@@ -51,6 +51,17 @@
         boxes[i].checked = this.checked
       }
     }
+    for(var i = 0; i < boxes.length; i++){
+      boxes[i].onclick = function(){
+        var flag = true;
+        for(var i = 0; i < boxes.length; i++){
+          if(!boxes[i].checked){
+            flag = false;
+          }
+        }
+        checkAll.checked = flag
+      }
+    }
   </script>
 </body>
 </html>
