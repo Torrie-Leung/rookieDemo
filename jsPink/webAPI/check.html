@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <input type="checkbox" name="" id="checkAll">
+          </th>
+          <th>product</th>
+          <th>price</th>
+        </tr>
+      </thead>
+      <tbody id="tBody">
+        <tr>
+          <td>
+            <input type="checkbox" name="" id="">
+          </td>
+          <td>iphone11</td>
+          <td>6500</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" name="" id="">
+          </td>
+          <td>iphoneSE</td>
+          <td>3299</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" name="" id="">
+          </td>
+          <td>Apple Watch</td>
+          <td>3500</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    var checkAll = document.getElementById("checkAll")
+    var boxes = document.getElementById("tBody").getElementsByTagName('input')
+    checkAll.onclick = function(){
+      for(var i = 0; i < boxes.length; i++){
+        boxes[i].checked = this.checked
+      }
+    }
+  </script>
+</body>
+</html>
