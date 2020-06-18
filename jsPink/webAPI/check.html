@@ -57,6 +57,7 @@
         for(var i = 0; i < boxes.length; i++){
           if(!boxes[i].checked){
             flag = false;
+            break; // 退出for loop,提高执行效率 只要有一个未选中，剩下无需判断
           }
         }
         checkAll.checked = flag
