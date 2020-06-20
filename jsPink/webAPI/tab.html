@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style: none;
+    }
+    .tab-list::after{
+      display: block;
+      content: '';
+      clear: both;
+    }
+    .tab-list li{
+      float: left;
+      height: 39px;
+      line-height: 39px;
+      padding: 0 20px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .tab-list .current{
+      background-color:#c81623 ;
+      color: #fff;
+    }
+    .item{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="tab">
+    <div class="tab-list">
+      <ul>
+        <li class="current">intro</li>
+        <li>content</li>
+        <li>support</li>
+        <li>review</li>
+      </ul>
+    </div>
+    <div class="tab-con">
+      <div class="item" style="display:block;">product intro</div>
+      <div class="item">product content</div>
+      <div class="item">support</div>
+      <div class="item">review</div>
+    </div>
+  </div>
+  <script>
+    var tab_list = document.querySelector('.tab-list')
+    var lis = document.querySelectorAll('li')
+    var items = document.querySelectorAll('.item')
+    for(var i =  0; i < lis.length; i++){
+      // 0. set attribute to li
+      lis[i].setAttribute('index', i);
+      lis[i].onclick = function(){
+        // 1. tab shuffle
+        for(var i = 0; i < lis.length; i++){
+          lis[i].className = '';
+          items[i].style.display = 'none'
+        }
+        this.className = 'current'
+        // 2. tab content shuffle
+        var idx = this.getAttribute('index')
+        console.log(idx)
+        items[idx].style.display = 'block'
+      }
+    }
+  </script>
+</body>
+</html>
