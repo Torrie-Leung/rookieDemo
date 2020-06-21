@@ -54,7 +54,7 @@
     var items = document.querySelectorAll('.item')
     for(var i =  0; i < lis.length; i++){
       // 0. set attribute to li
-      lis[i].setAttribute('index', i);
+      lis[i].setAttribute('data-index', i);
       lis[i].onclick = function(){
         // 1. tab shuffle
         for(var i = 0; i < lis.length; i++){
@@ -63,8 +63,9 @@
         }
         this.className = 'current'
         // 2. tab content shuffle
-        var idx = this.getAttribute('index')
-        console.log(idx)
+        var idx = this.getAttribute('data-index')
+        // console.log(idx)
+        // dataset 只兼容 ie11
         items[idx].style.display = 'block'
       }
     }
