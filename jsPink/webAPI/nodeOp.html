@@ -22,9 +22,16 @@
 <body>
   <div class="box">
     <span class="QR">X</span>
+    <ul>
+      <li>list-A</li>
+      <li>list-B</li>
+      <li>list-C</li>
+    </ul>
   </div>
   <script>
     var qr = document.querySelector('.QR')
+    var nl = document.querySelector('ul').childNodes
+    console.log(nl,nl[0].nodeType)
     qr.onclick = function(){
       qr.parentNode.style.display = 'none'
     }
