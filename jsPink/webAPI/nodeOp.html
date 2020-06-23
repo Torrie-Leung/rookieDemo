@@ -30,8 +30,12 @@
   </div>
   <script>
     var qr = document.querySelector('.QR')
-    var nl = document.querySelector('ul').childNodes
-    console.log(nl,nl[0].nodeType)
+    var ul = document.querySelector('ul')
+    var nl = document.querySelector('ul').children
+    // 解决兼容性写法
+    console.log(ul.children[ul.children.length - 1])
+    // console.log(nl,nl[0].nodeType)
+    console.log(nl)
     qr.onclick = function(){
       qr.parentNode.style.display = 'none'
     }
