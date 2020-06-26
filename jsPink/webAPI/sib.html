@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>sib1</div>
+  <span>sib2</span>
+  <script>
+    var sib2 = document.querySelector('div').nextSibling
+    console.log(sib2)// 包含所有节点（如文本节点
+    var sibEN = document.querySelector('div').nextElementSibling
+    console.log(sibEN)
+  </script>
+</body>
+</html>
