@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <textarea name="" id="ta" cols="30" rows="10"></textarea>
+  <button>submit</button>
+  <ul>
+
+  </ul>
+  <script>
+    var txtArea = document.querySelector('#ta')
+    var btn = document.querySelector('button')
+    var ul = document.querySelector('ul')
+
+    btn.onclick = function(){
+      if(txtArea.value == ''){
+        alert('请输入内容')
+        return false
+      }else{
+        var li = document.createElement('li')
+        li.innerHTML = txtArea.value
+        ul.insertBefore(li,ul.children[0])
+        txtArea.value = ''
+      }
+    }
+  </script>
+</body>
+</html>
