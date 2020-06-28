@@ -35,10 +35,20 @@
       }else{
         var li = document.createElement('li')
         var delBtn = `<button class = "delBtn">X</button>`
+        
         li.innerHTML = txtArea.value
         li.innerHTML += delBtn
+        
         ul.insertBefore(li,ul.children[0])
         txtArea.value = ''
+        
+        var delbtns = document.querySelectorAll('.delBtn') //要获取所有的删除按钮
+        
+        for(i = 0; i < delbtns.length; i++){
+          delbtns[i].onclick = function(){
+            ul.removeChild(this.parentNode)
+          }
+        }
       }
     }
   </script>
