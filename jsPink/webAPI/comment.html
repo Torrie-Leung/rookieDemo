@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style>
+    li {
+      position: relative;
+    }
+    .delBtn{
+      position: absolute;
+      display: inline-block;
+      right: 0;
+      top: 1px;
+    }
+  </style>
 </head>
 <body>
   <textarea name="" id="ta" cols="30" rows="10"></textarea>
@@ -23,7 +34,9 @@
         return false
       }else{
         var li = document.createElement('li')
+        var delBtn = `<button class = "delBtn">X</button>`
         li.innerHTML = txtArea.value
+        li.innerHTML += delBtn
         ul.insertBefore(li,ul.children[0])
         txtArea.value = ''
       }
