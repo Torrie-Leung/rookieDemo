@@ -48,6 +48,17 @@
         score: 85
       }
     ]
+
+    // create row by data length
+    var tbody = document.querySelector('tbody')
+    for(var i = 0; i < datas.length; i++){
+      var tr = document.createElement('tr')
+      tbody.appendChild(tr)
+      for(var k in datas[i]){
+        var td = document.createElement('td')
+        tr.appendChild(td)
+      }
+    }
   </script>
 </body>
 </html>
