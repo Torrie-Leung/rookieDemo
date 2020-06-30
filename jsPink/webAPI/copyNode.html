@@ -14,7 +14,7 @@
   </ul>
   <script>
     var ul = document.querySelector('ul')
-    var lili = ul.children[0].cloneNode() // cloneNode不写参数则为浅kaobei
+    var lili = ul.children[0].cloneNode(true) // cloneNode不写参数则为浅kaobei true则是深拷贝
     ul.appendChild(lili)
   </script>
 </body>
