@@ -63,6 +63,13 @@
       td.innerHTML = '<a href="javascript:;">Delete</a>'
       tr.appendChild(td)
     }
+
+    var as = document.querySelectorAll('a')
+    for(var i = 0; i < as.length; i++){
+      as[i].onclick = function(){
+        tbody.removeChild(this.parentNode.parentNode)
+      }
+    }
   </script>
 </body>
 </html>
