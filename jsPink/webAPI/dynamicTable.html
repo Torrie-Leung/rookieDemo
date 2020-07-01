@@ -56,8 +56,12 @@
       tbody.appendChild(tr)
       for(var k in datas[i]){
         var td = document.createElement('td')
+        td.innerHTML = datas[i][k]
         tr.appendChild(td)
       }
+      var td = document.createElement('td')
+      td.innerHTML = '<a href="javascript:;">Delete</a>'
+      tr.appendChild(td)
     }
   </script>
 </body>
