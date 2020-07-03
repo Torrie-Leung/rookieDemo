@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button>船筒注册事件</button>
+  <button>方法监听注册事件</button>
+  <script>
+    var btns = document.querySelectorAll('button')
+    btns[0].onclick = function(){
+      console.log('船筒～')
+    } 
+    // ie9之前用attachEvent()
+    // 同一个元素&事件可以添加多个侦听器
+    btns[1].addEventListener('click', function(){
+      console.log('船新～')
+    })
+    btns[1].addEventListener('click', function(){
+      console.log('船新2～')
+    })
+  </script>
+</body>
+</html>
