@@ -9,6 +9,7 @@
 <body>
   <button>船筒注册事件</button>
   <button>方法监听注册事件</button>
+  <button>before ie9</button>
   <script>
     var btns = document.querySelectorAll('button')
     btns[0].onclick = function(){
@@ -21,6 +22,9 @@
     })
     btns[1].addEventListener('click', function(){
       console.log('船新2～')
+    })
+    btns[2].attachEvent('onclick',function(){
+      console.log('ie爬山')
     })
   </script>
 </body>
