@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <a href="https://www.youtube.com/">youtube</a>
+  <form action="https://www.youtube.com/">
+    <input type="submit" value="Submit" name="sub">
+  </form>
+  <script>
+    var a = document.querySelector('a')
+    a.addEventListener('click',fn)
+    a.onclick = function(e){
+      e.preventDefault()
+      // 兼容ie678
+      e.returnValue;
+      //return false 也阔以 并且无兼容性问题 但后续代码不会执行且仅限于传统注册方式
+      // return false
+    }
+    function fn(e){
+      e.preventDefault()
+    }
+  </script>
+</body>
+</html>
