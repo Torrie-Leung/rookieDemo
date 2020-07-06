@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //up & down不区分字母大小写识别功能键
+    document.addEventListener('keyup',function(e){
+      console.log('up:'+e.keyCode)
+    })
+    // press 区分大小写 但不识别功能键
+    document.addEventListener('keypress',function(e){
+      console.log('press:'+e.keyCode)
+    })
+  </script>
+</body>
+</html>
