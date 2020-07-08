@@ -54,6 +54,16 @@
         con.innerHTML = this.value
       }
     })
+
+    gd.addEventListener('blur',function(){
+      con.style.display = 'none'
+    })
+    gd.addEventListener('focus',function(){
+      if(this.value !== ''){
+        con.style.display = 'block'
+      }
+      
+    })
   </script>
 </body>
 </html>
