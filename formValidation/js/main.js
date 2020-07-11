@@ -6,11 +6,14 @@
 $(function(){
   'use strict';
 
-  var validator = new Validator('20',{
+  var validator = new Validator('hahdhfl',{
     max:100,
     min:18,
+    maxlength:30
   })
 
-  var res = validator.validate_max();
+  // var res = validator.validate_max();
+  // var res = validator.validate_min();
+  var res = validator.validate_maxlength();
   console.log('res:',res);
 });
