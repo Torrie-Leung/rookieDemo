@@ -18,11 +18,13 @@
       <form action="">
         <div class="input-wrap">
           <label for="">Name</label>
-          <input type="text" class="input-control">
+          <input data-rule="min:18|maxlength:10|minlength:3|nullable:false" type="text" class="input-control">
           <div class="input-err">wrong name style</div>
         </div>
       </form>
     </div>
   </div>
+  <script src="js/validator.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
