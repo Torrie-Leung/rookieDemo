@@ -6,7 +6,7 @@
 $(function(){
   'use strict';
 
-  var validator = new Validator('hahdhfl',{
+  var validator = new Validator(' 8 ',{
     max:100,
     min:18,
     maxlength:30
@@ -14,6 +14,8 @@ $(function(){
 
   // var res = validator.validate_max();
   // var res = validator.validate_min();
-  var res = validator.validate_maxlength();
+  // var res = validator.validate_maxlength();
+  // var res = validator.validate_numeric();
+  var res = validator.validate_required();
   console.log('res:',res);
 });

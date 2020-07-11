@@ -21,12 +21,16 @@ $(function(){
     this.validate_numeric = function(){
       return $.isNumeric(val);
     }
-    this.validate_nullable = function(){
+    this.validate_required = function(){
       var real = $.trim(val)
       if(!real && real !== 0){
         return false;
       }
       return true;
+    }
+    this.validate_pattern = function(){
+      var reg = new this.RegExp(rule.pattern)
+      return reg.test(val);
     }
     // for this.validate_max or this.validate_min
     function pre_max_min(){
