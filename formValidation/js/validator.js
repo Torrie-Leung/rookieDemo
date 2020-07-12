@@ -29,7 +29,7 @@ $(function(){
       return true;
     }
     this.validate_pattern = function(){
-      var reg = new this.RegExp(rule.pattern)
+      var reg = new RegExp(rule.pattern)
       return reg.test(val);
     }
     // for this.validate_max or this.validate_min
