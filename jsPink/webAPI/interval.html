@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    span{
+      display: inline-block;
+      padding: 10px;
+      background: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <span class="hour">1</span>
+    <span class="minute">2</span>
+    <span class="second">3</span>
+  </div>
+  <script>
+    var hour = document.querySelector('.hour')
+    var minute = document.querySelector('.minute')
+    var second = document.querySelector('.second')
+    const inputTime = +new Date('2020-7-17 18:00')//返回用户输入时间总毫秒数
+    // 防止第一次刷新页面空白
+    countDown()
+    // 开启定时器
+    setInterval(countDown,1000)
+    function countDown(){
+      const nowTime = +new Date()// 返回当前时间的总毫秒数
+      
+      let timeInterval = (inputTime - nowTime)/1000 // millisecond transfers to second
+      
+      let h = parseInt(timeInterval/60/60%24)
+      h = h < 10 ? '0'+ h : h
+      hour.innerHTML = h
+      let m = parseInt(timeInterval/60%60)
+      m = m < 10 ? '0'+ m : m
+      minute.innerHTML = m
+      let s = parseInt(timeInterval%60)
+      s = s < 10 ? '0'+ s : s
+      second.innerHTML = s
+    }
+  </script>
+</body>
+</html>
