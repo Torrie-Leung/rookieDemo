@@ -12,13 +12,14 @@
     var btn = document.querySelector('button')
     var time = 3
     btn.addEventListener('click',function(){
-      btn.disabled = true
+      this.disabled = true
       var timer = setInterval(function(){
         
         if(time == 0){
           clearInterval(timer)
           btn.disabled = false
           btn.innerHTML = '重新发送'
+          time = 3 // 重新开始
         }else{
           btn.innerHTML = '仲有'+ time + 's'
           time --;
