@@ -8,11 +8,23 @@
 </head>
 <body>
   <button>click</button>
+  <div></div>
   <script>
     var btn = document.querySelector('button')
+    var div = document.querySelector('div')
+    var time = 3
     btn.addEventListener('click',function(){
       window.location.href = 'https://www.youtube.com/'
     })
+    setInterval(function(){
+      if(time == 0){
+          window.location.href = 'https://www.zhihu.com/search?type=content&q=%E5%89%8D%E7%AB%AF'
+          time = 3 // 重新开始
+        }else{
+          div.innerHTML = '仲有'+ time + 's' + '跳转'
+          time --;
+        }
+    },1000)
   </script>
 </body>
 </html>
