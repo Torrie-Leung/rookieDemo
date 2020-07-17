@@ -7,9 +7,18 @@
   <title>Document</title>
 </head>
 <body>
-  username
+  <div></div>
   <script>
     console.log(location.search)
+    // 1. delete ? substr('start',how many)
+    var params = location.search.substr(1)
+    console.log(params)
+    // 2. split string
+    var arr = params.split('=')
+    console.log(arr)
+    var div = document.querySelector('div')
+    div.innerHTML = 'Welcome '+ arr[1]
+    console.log(navigator.userAgent)
   </script>
 </body>
 </html>
