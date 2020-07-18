@@ -17,9 +17,11 @@
   <div class="box"></div>
   <script>
     var box = document.querySelector('.box')
-    box.addEventListener('click',function(e){
-      var mouseToBoxLeft = e.pageX - box.offsetLeft
-      console.log(mouseToBoxLeft)
+    box.addEventListener('mousemove',function(e){
+      var mouseToBoxLeft = e.pageX - this.offsetLeft
+      var mouseToBoxTop= e.pageY - this.offsetTop
+      console.log(mouseToBoxLeft,mouseToBoxTop)
+      this.innerHTML = `mouse location in box is x:${mouseToBoxLeft}, y:${mouseToBoxTop}`
     })
   </script>
 </body>
