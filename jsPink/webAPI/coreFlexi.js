@@ -1,0 +1,1 @@
+(function flexible(window,document){})(window,document);
