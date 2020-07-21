@@ -14,4 +14,11 @@
     }
   }
   setBodyFontSize();
+
+  //设置html元素的文字大小
+  function setRemUnit(){
+    var rem = docEl.clientWidth / 10 // 把整个屏幕划分10等分
+    docEl.style.fontSize = rem + 'px'
+  }
+  setRemUnit()
 }(window, document))
