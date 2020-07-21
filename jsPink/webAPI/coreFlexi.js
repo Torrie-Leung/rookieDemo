@@ -21,4 +21,14 @@
     docEl.style.fontSize = rem + 'px'
   }
   setRemUnit()
+
+  // reset rem unit on page size
+  window.addEventListener('resize',setRemUnit)
+  // pageshow是重新加载页面触发的事件 且兼容火狐
+  window.addEventListener('pageshow',function(e){
+    // 事件对象中的persisted来判断是否页面来自于缓存
+    if(e.persisted){
+      setRemUnit()
+    }
+  })
 }(window, document))
