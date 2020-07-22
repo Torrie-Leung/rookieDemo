@@ -31,4 +31,17 @@
       setRemUnit()
     }
   })
+
+  // detect 0.5px 有些移动端浏览器不支持0.5px的写法
+  if(dpr >= 2){
+    var fakeBody = document.createElement('body')
+    var testEle = document.createElement('div')
+    testEle.style.border = '.5px solid transparent'
+    fakeBody.appendChild(testEle)
+    docEl.appendChild(fakeBody)
+    if(testEle.offsetHeight === 1){
+      docEl.classList.add('hairlines')
+    }
+    docEl.removeChild(fakeBody)
+  }
 }(window, document))

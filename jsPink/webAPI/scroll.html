@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      border: 2px solid saddlebrown;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    content omb content bombbomb content bomb content bomb content bomb content bomb content bomb content bomb content bomb
+    content bomb content bomb content bomb content bomb content bomb content bomb content b
+  </div>
+  <script>
+    // scroll系列
+    var div = document.querySelector('div')
+    console.log(div.scrollHeight) // 包含padding，实际内容高度 不包含边框 
+    console.log(div.clientHeight)
+  </script>
+</body>
+</html>
