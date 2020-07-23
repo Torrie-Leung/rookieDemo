@@ -10,6 +10,8 @@
       width: 200px;
       height: 200px;
       border: 2px solid saddlebrown;
+      padding: 10px;
+      overflow: auto;
     }
   </style>
 </head>
@@ -23,6 +25,10 @@
     var div = document.querySelector('div')
     console.log(div.scrollHeight) // 包含padding，实际内容高度 不包含边框 
     console.log(div.clientHeight)
+
+    div.addEventListener('scroll',function(){
+      console.log(div.scrollTop) //被卷去的距离
+    })
   </script>
 </body>
 </html>
