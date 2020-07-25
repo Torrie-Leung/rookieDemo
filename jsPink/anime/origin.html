@@ -23,13 +23,17 @@
   </style>
 </head>
 <body>
+  <button>点了才走</button>
   <div></div>
   <span></span>
   <script>
     var div = document.querySelector('div')
     var span = document.querySelector('span')
+    var btn = document.querySelector('button')
     //简单动画函数封装
     function animate(obj,target){
+      //保证当前有且只有1个定时器在运行
+      clearInterval(obj.timer)
       //js可给不同对象添加属性，自己专门用自己的定时器
       obj.timer = setInterval(function(){
         if(obj.offsetLeft >= target){
@@ -39,8 +43,12 @@
       },30)
     }
 
-    animate(div,300)
-    animate(span,200)
+    btn.addEventListener('click',function(){
+      animate(div,300)
+      animate(span,200)
+    })
+
+    
     
   </script>
 </body>
