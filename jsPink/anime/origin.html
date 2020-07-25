@@ -36,10 +36,14 @@
       clearInterval(obj.timer)
       //js可给不同对象添加属性，自己专门用自己的定时器
       obj.timer = setInterval(function(){
+        //步长写进定时器中
+        var step = (target - obj.offsetLeft) / 10
         if(obj.offsetLeft >= target){
           clearInterval(obj.timer)
         }
-        obj.style.left = obj.offsetLeft + 3 + 'px'
+        // 匀速动画： 盒子当前位置 + 固定值
+        // 缓动动画： 盒子当前位置 + 变化值（目标位置-当前位置）/ 10
+        obj.style.left = obj.offsetLeft + step + 'px'
       },30)
     }
 
