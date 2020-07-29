@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+    }
+    .c-nav{
+      position: relative;
+      width: 80%;
+      min-height: 40px;
+      margin: 0 auto;
+      background: darkcyan;
+    }
+    .c-nav li{
+      float: left;
+      width: 20%;
+      height: 25px;
+      padding-top: 10px;
+      text-align: center;
+      z-index: 5;
+    }
+    .cloud{
+      position: absolute;
+      top: 0;
+      left: 10%;
+      width: 40px;
+      height: 40px;
+      background: url(img/star.jpg) no-repeat center center;
+    }
+  </style>
+  
+</head>
+<body>
+  <div id="c_nav" class="c-nav">
+    <span class="cloud"></span>
+    <ul>
+      <li class="current"><a href="#">首页新闻</a></li>
+      <li><a href="#">阿里巴巴</a></li>
+      <li><a href="#">阿里弟弟</a></li>
+      <li><a href="#">阿里妹妹</a></li>
+      <li><a href="#">阿里姐姐</a></li>
+    </ul>
+  </div>
+  <script src="./myAnimation.js"></script>
+  <script>
+    window.addEventListener('load',function(){
+      var cloud = document.querySelector('.cloud')
+      var c_nav = document.querySelector('#c_nav')
+      var lis = c_nav.querySelectorAll('li')
+      for(var i = 0; i < lis.length; i++){
+        lis[i].addEventListener('mouseenter',function(){
+          console.log(this.offsetLeft)
+          animate(cloud,this.offsetLeft)
+        })
+      }
+    })
+  </script>
+</body>
+</html>
