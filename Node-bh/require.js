@@ -1,2 +1,2 @@
 const a = require('./greeting')
-console.log(a.greeting('chimp'));
+console.log(a.greeting('bender'));
