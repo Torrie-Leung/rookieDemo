@@ -13,18 +13,32 @@
       margin: 0 auto;
       border: 1px dashed darkblue;
     }
+    .pink{
+      background-color: plum;
+    }
+    .txt-color{
+      color: cadetblue;
+    }
   </style>
 </head>
 <body>
-  <div></div>
+  <div>Hard rock like Lancelot</div>
   <script>
     $(function(){
       $('div').click(function(){
         $(this).css({
           width:150,
           height:150,
-          background: 'skyblue'
+          // 复合属性需用camel-case,值不是number需要加引号
+          backgroundColor: 'skyblue'
         })
+        $(this).toggleClass('txt-color')
+      })
+      $('div').mouseover(function(){
+        $(this).addClass('pink')
+      })
+      $('div').mouseout(function(){
+        $(this).removeClass('pink')
       })
     })
   </script>
