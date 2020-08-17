@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Document</title>
+  <style>
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li{
+      border-bottom: 1px solid gold;
+    }
+    li:hover{
+      cursor: pointer;
+    }
+    .box{
+      width: 300px;
+      height: 120px;
+      margin: 0 auto;
+      border: 1px solid #eee;
+    }
+    .navLis{
+      float: left;
+      width: 15%;
+    }
+    .li-con{
+      float: right;
+      width: 84%;
+      text-align: left;
+    }
+    .li-item{
+      display: none;
+    }
+    .li-item.curr-con{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="navLis">
+      <ul id="leftTabs">
+        <li>tab1</li>
+        <li>tab2</li>
+        <li>tab3</li>
+        <li>tab4</li>
+      </ul>
+    </div>
+    <div class="li-con">
+      <div class="curr-con li-item">1</div>
+      <div class="li-item">2</div>
+      <div class="li-item">3</div>
+      <div class="li-item">4</div>
+    </div>
+  </div>
+  <script>
+    $(function(){
+      $('#leftTabs li').mouseover(function(){
+        var idx = $(this).index();
+        $('.li-con div').eq(idx).show();
+        $('.li-con div').eq(idx).siblings().hide()
+      })
+    })
+  </script>
+</body>
+</html>
