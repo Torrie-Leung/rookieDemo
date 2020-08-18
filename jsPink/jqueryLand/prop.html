@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <a href="http://www.youtube.com" title="Youtube">youtube</a>
+  <input type="checkbox" checked>
+  <div index="Diggs" data-index="222" data-role="Lafayette" data-code="321">Daveed</div>
+  <span>123</span>
+  <script>
+    $(function(){
+      console.log($("a").prop("href"))
+      console.log($("a").prop("title"))
+      $("input").change(function(){
+        console.log($(this).prop("checked"))
+      })
+      // get customed attr
+      console.log($("div").attr("index"))
+      console.log($("div").attr("data-role"))
+      console.log($("div").attr("data-code"))
+
+      // data chache in element
+      $("span").data("urname","chimp")
+      console.log($("span").data("urname"))
+
+      // get data- attr & return value is number type
+      console.log($("div").data("code"))
+      console.log($("div").data("index"))
+    })
+  </script>
+</body>
+</html>
