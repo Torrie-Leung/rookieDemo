@@ -96,9 +96,10 @@
     $(function(){
       // mouseover/out
       $(".nav > li").hover(function(){
-        $(this).children("ul").slideDown(200)
+        //stop()停止排队动画
+        $(this).children("ul").stop().slideDown(200)
       },function(){
-        $(this).children("ul").slideUp(200)
+        $(this).children("ul").stop().slideUp(200)
       })
     })
   </script>
