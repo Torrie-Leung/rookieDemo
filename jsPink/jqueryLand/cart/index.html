@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Document</title>
+  <style>
+    a{
+      text-decoration: none;
+      color:#333
+    }
+    .clear::after{
+      content: '';
+      clear: both;
+    }
+    .cart-thead{
+      height: 40px;
+    }
+    .cart-thead div,.cart-floatbar div,.cart-item div{
+      float:left;
+      margin-right: 10px;
+      padding: 0 10px;
+    }
+    .cart-item{
+      min-height: 90px;
+      border-bottom: 1px solid #999;
+    }
+    .p-checkbox{
+      min-width: 30px;
+      text-align: center;
+      margin-left: 64px;
+    }
+    .quantity-form input{
+      max-width: 12px;
+      text-align: center;
+    }
+    
+  </style>
+</head>
+<body>
+  <!-- header option area -->
+  <div class="cart-thead clear">
+    <div class="t-checkbox">
+      <label for="checkAll">select all</label>
+      <input type="checkbox" name="" id="checkAll" class="checkAll">   
+    </div>
+    <div class="t-goods">product</div>
+    <div class="t-price">price</div>
+    <div class="t-num">quantity</div>
+    <div class="t-sum">summary</div>
+    <div class="t-action">action</div>
+  </div>
+  <!-- product items -->
+  <div class="cart-item-list">
+    <div class="cart-item check-cart-item">
+      <div class="p-checkbox">
+        <input type="checkbox" name="" id="" class="j-checkobx">
+      </div>
+      <div class="p-goods">
+        <div class="p-msg">xxxx</div>
+      </div>
+      <div class="p-price">$2.3</div>
+      <div class="p-num">
+        <div class="quantity-form">
+          <a href="javascript:;" class="decrement">-</a>
+          <input type="text" class="itxt" value="1">
+          <a href="javascript:;" class="increment">+</a>
+        </div>
+      </div>
+    </div>
+    <div class="cart-item check-cart-item">
+      <div class="p-checkbox">
+        <input type="checkbox" name="" id="" class="j-checkobx">
+      </div>
+      <div class="p-goods">
+        <div class="p-msg">eee</div>
+      </div>
+      <div class="p-price">$23</div>
+      <div class="p-num">
+        <div class="quantity-form">
+          <a href="javascript:;" class="decrement">-</a>
+          <input type="text" class="itxt" value="1">
+          <a href="javascript:;" class="increment">+</a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <!-- bill -->
+  <div class="cart-floatbar">
+    <div class="select-all">
+      <label for="checkAll">select all</label>
+      <input type="checkbox" name="" id="" class="checkAll">
+    </div>
+    <div class="operation">
+      <a href="javascript:;" class="remove-product">remove selected product</a>
+      <a href="javascript:;" class="clear-all">clean slate</a>
+    </div>
+    <div class="toolbar">
+      <div class="amount-sum">selected product number:<em>1</em></div>
+      <div class="price-sum">total: <em>$230</em></div>
+      <div class="btn-area">pay the bill</div>
+    </div>
+  </div>
+  <script src="./cart.js"></script>
+</body>
+</html>
