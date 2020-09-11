@@ -14,4 +14,18 @@ $(function(){
       $(".checkAll").prop("checked",false) 
     }
   })
+  // 增减商品数量
+  $(".increment").click(function(){
+    var n = $(this).siblings(".itxt").val();
+    n++;
+    $(this).siblings(".itxt").val(n)
+  })
+  $(".decrement").click(function(){
+    var n = $(this).siblings(".itxt").val();
+    if(n == 1){
+      return
+    }
+    n--;
+    $(this).siblings(".itxt").val(n)
+  })
 });
