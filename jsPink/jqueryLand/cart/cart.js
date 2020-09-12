@@ -19,8 +19,8 @@ $(function(){
     var n = $(this).siblings(".itxt").val();
     n++;
     $(this).siblings(".itxt").val(n)
-    var price = $(this).parent().parent().siblings(".p-price").html().substr(1);
-    $(this).parent().parent().siblings(".p-sum").html("$"+price*n)
+    var price = $(this).parents(".p-num").siblings(".p-price").html().substr(1);
+    $(this).parent().parent().siblings(".p-sum").html("$"+(price*n).toFixed(2))
   })
   $(".decrement").click(function(){
     var n = $(this).siblings(".itxt").val();
@@ -29,7 +29,13 @@ $(function(){
     }
     n--;
     $(this).siblings(".itxt").val(n)
-    var price = $(this).parent().parent().siblings(".p-price").html().substr(1);
-    $(this).parent().parent().siblings(".p-sum").html("$"+price*n)
+    var price = $(this).parents(".p-num").siblings(".p-price").html().substr(1);
+    $(this).parent().parent().siblings(".p-sum").html("$"+(price*n).toFixed(2))
+  })
+  // 直接修改输入框数值
+  $(".itxt").change(function(){
+    var n = $(this).val()
+    var price = $(this).parents(".p-num").siblings(".p-price").html().substr(1);
+    $(this).parent().parent().siblings(".p-sum").html("$"+(price*n).toFixed(2))
   })
 });
