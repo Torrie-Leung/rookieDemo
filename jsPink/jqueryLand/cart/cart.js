@@ -19,6 +19,8 @@ $(function(){
     var n = $(this).siblings(".itxt").val();
     n++;
     $(this).siblings(".itxt").val(n)
+    var price = $(this).parent().parent().siblings(".p-price").html().substr(1);
+    $(this).parent().parent().siblings(".p-sum").html("$"+price*n)
   })
   $(".decrement").click(function(){
     var n = $(this).siblings(".itxt").val();
@@ -27,5 +29,7 @@ $(function(){
     }
     n--;
     $(this).siblings(".itxt").val(n)
+    var price = $(this).parent().parent().siblings(".p-price").html().substr(1);
+    $(this).parent().parent().siblings(".p-sum").html("$"+price*n)
   })
 });
