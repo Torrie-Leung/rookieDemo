@@ -24,13 +24,21 @@
       var sum = 0
       $(".order").each(function(i,ele){
         // each() the 1st arg is index, 2nd is the dom element
-        console.log(i,ele)
+        // console.log(i,ele)
         // need to transfer dom element to jquery element
         $(ele).css("color",colors[i])
         sum+=parseInt($(ele).text())
         
       })
       $(".sum").text(sum)
+
+
+      // $.each() iterates dom eles,for iterating&dealing with data
+      $.each($(".order"),function(i,ele){
+        console.log(i,ele)
+      })
+
+      
     })
   </script>
 </body>

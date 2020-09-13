@@ -21,6 +21,7 @@ $(function(){
     $(this).siblings(".itxt").val(n)
     var price = $(this).parents(".p-num").siblings(".p-price").html().substr(1);
     $(this).parent().parent().siblings(".p-sum").html("$"+(price*n).toFixed(2))
+    getSum();
   })
   $(".decrement").click(function(){
     var n = $(this).siblings(".itxt").val();
@@ -31,11 +32,27 @@ $(function(){
     $(this).siblings(".itxt").val(n)
     var price = $(this).parents(".p-num").siblings(".p-price").html().substr(1);
     $(this).parent().parent().siblings(".p-sum").html("$"+(price*n).toFixed(2))
+    getSum();
   })
   // 直接修改输入框数值
   $(".itxt").change(function(){
     var n = $(this).val()
     var price = $(this).parents(".p-num").siblings(".p-price").html().substr(1);
-    $(this).parent().parent().siblings(".p-sum").html("$"+(price*n).toFixed(2))
+    $(this).parent().parent().siblings(".p-sum").html("$"+(price*n).toFixed(2));
+    getSum();
   })
+
+  function getSum(){
+    var count = 0;
+    var bill = 0;
+    $(".itxt").each(function(i,ele){
+      count += parseInt($(ele).val());
+    });
+    $(".amount-sum em").text(count);
+    $(".p-sum").each(function(i,ele){
+      bill +=parseFloat($(ele).text().substr(1));
+    })
+    $(".price-sum em").text("$"+bill.toFixed(2));
+  }
+  
 });
