@@ -12,6 +12,7 @@
     <li>the original li</li>
   </ul>
   <div>old div</div>
+  <p>1个p</p>
   <script>
     $(function(){
       //  1. create ele
@@ -20,6 +21,10 @@
       // 2. inner append
       $("ul").append(li);
       $("div").prepend(lii);
+      // 3.rmv ele
+      $("ul").remove(); // suicide
+      $("div").empty();
+      $("p").html("")
     })
   </script>
 </body>
