@@ -2,7 +2,12 @@ $(function(){
   // check all uncheck all
   //把全选按钮的状态赋值给商品中的按钮
   $(".checkAll").change(function(){
-    $(".j-checkobx,.checkAll").prop("checked",$(this).prop("checked")) 
+    $(".j-checkobx,.checkAll").prop("checked",$(this).prop("checked"))
+    if($(this).prop("checked")) {
+      getSum();
+    }else{
+      clear();
+    }
   })
   // 通过小复选框控制全选
   
@@ -42,6 +47,9 @@ $(function(){
     getSum();
   })
 
+  // 首次打开页面调用
+  // getSum();
+
   function getSum(){
     var count = 0;
     var bill = 0;
@@ -53,6 +61,10 @@ $(function(){
       bill +=parseFloat($(ele).text().substr(1));
     })
     $(".price-sum em").text("$"+bill.toFixed(2));
+  }
+  function clear(){
+    $(".amount-sum em").text('');
+    $(".price-sum em").text("$");
   }
   
 });
