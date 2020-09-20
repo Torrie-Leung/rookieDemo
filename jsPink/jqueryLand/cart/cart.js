@@ -70,14 +70,17 @@ $(function(){
   // del product
   $(".del").click(function(){
     $(this).parents(".cart-item").remove()
+    getSum()
   })
 
   $(".remove-product").click(function(){
     //删除小复选框选中
-    $(".j-checkobx:checked").parents(".cart-item").remove()
+    $(".j-checkobx:checked").parents(".cart-item").remove();
+    getSum();
   })
   $(".clear-all").click(function(){
-    $(".cart-item").remove()
+    $(".cart-item").remove();
+    getSum();
   })
   
 });
