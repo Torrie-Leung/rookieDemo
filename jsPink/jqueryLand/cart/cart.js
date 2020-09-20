@@ -66,5 +66,10 @@ $(function(){
     $(".amount-sum em").text('');
     $(".price-sum em").text("$");
   }
+
+  // del product
+  $(".del").click(function(){
+    $(this).parents(".cart-item").remove()
+  })
   
 });
