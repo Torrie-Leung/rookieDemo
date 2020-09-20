@@ -71,5 +71,13 @@ $(function(){
   $(".del").click(function(){
     $(this).parents(".cart-item").remove()
   })
+
+  $(".remove-product").click(function(){
+    //删除小复选框选中
+    $(".j-checkobx:checked").parents(".cart-item").remove()
+  })
+  $(".clear-all").click(function(){
+    $(".cart-item").remove()
+  })
   
 });
