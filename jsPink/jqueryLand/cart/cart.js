@@ -5,8 +5,10 @@ $(function(){
     $(".j-checkobx,.checkAll").prop("checked",$(this).prop("checked"))
     if($(this).prop("checked")) {
       getSum();
+      $(".cart-item").addClass("check-bg")
     }else{
       clear();
+      $(".cart-item").removeClass("check-bg")
     }
   })
   // 通过小复选框控制全选
