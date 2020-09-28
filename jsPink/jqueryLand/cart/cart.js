@@ -20,6 +20,11 @@ $(function(){
     }else{
       $(".checkAll").prop("checked",false) 
     }
+    if($(this).prop("checked")){
+      $(this).parents(".cart-item").addClass("check-bg")
+    }else{
+      $(this).parents(".cart-item").removeClass("check-bg")
+    }
   })
   // 增减商品数量
   $(".increment").click(function(){
