@@ -12,19 +12,30 @@
       height: 100px;
       background: #eeffee;
     }
+    .curr{
+      width: 130px;
+      height: 130px;
+    }
   </style>
 </head>
 <body>
   <div></div>
+  <div class="ot"></div>
   <script>
     $(function(){
       $("div").on({
         mouseenter:function(){
           $(this).css("background","skyblue")
         },
+        mouseleave:function(){
+          $(this).css("background","green")
+        },
         click:function(){
           $(this).css("background","purple")
         },
+      })
+      $(".ot").on("mouseenter mouseleave",function(){
+        $(this).toggleClass("curr")
       })
     })
   </script>
