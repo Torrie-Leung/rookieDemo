@@ -7,6 +7,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <title>reVue helloworld</title>
   <style type="text/css">
+  /* 先通过样式隐藏内容，然后在内存中进行值替换，换完之后才显示最终结果 */
     [v-cloak]{
       display: none;
     }
@@ -17,16 +18,20 @@
     {{msg}}
     <span>{{msg + '---' + 123}}</span>
     <!-- 一起用时，这个指令可以隐藏未编译的 Mustache 标签直到实例准备完毕。 -->
-    <div v-cloak>
-      {{ msg }}
-    </div>
+    <div v-cloak v-text='msg'></div>
+    <!-- v-html有安全隐患 -->
+    <div v-html='msgg'></div>
+    <!-- 跳过编译过程，显示原始信息 -->
+    <div v-pre>{{msgg}}</div>
+    
   </div>
   
   <script>
     var app = new Vue({
       el:'#app',
       data:{
-        msg: 'Hey dummy~'
+        msg: 'Hey dummy~',
+        msgg:'<h3>hey Daveed</h3>'
       }
     })
   </script>
