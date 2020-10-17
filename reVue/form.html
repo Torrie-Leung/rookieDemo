@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>v-form</title>
+</head>
+<body>
+  <div id="app">
+    <form>
+      <div>
+        <span>Name:</span>
+        <span>
+          <input v-model="username" type="text" />
+        </span>
+      </div>
+      <div>
+        <span>Gender:</span>
+        <span>
+          <input type="radio" id="male"/>
+          <label for="male">Male</label>
+          <input type="radio" id="female"/>
+          <label for="female">female</label>
+        </span>
+      </div>
+
+      <div>
+        <span>Favs:</span>
+        <input type="checkbox" id="netflix"/>
+        <label for="netflix">Netflix and Chill</label>
+        <input type="checkbox" id="coding"/>
+        <label for="coding">Coding</label>
+        <input type="checkbox" id="workout"/>
+        <label for="workout">Workout</label>
+      </div>
+
+      <div>
+        <span>Job:</span>
+        <select>
+          <option>please choose</option>
+          <option>coder</option>
+          <option>sanitor</option>
+          <option>butcher</option>
+        </select>
+      </div>
+
+      <div>
+        <!-- submit form -->
+        <input type="submit" value="Submit" @click.prevent = "handleSubmit">
+      </div>
+    </form>
+  </div>
+
+
+  <script>
+    var app = new Vue({
+      el:'#app',
+      data:{
+        username: 'Cool Chimp'
+      },
+      methods: {
+        handleSubmit() {
+          console.log(this.username)
+        }
+      },
+    })
+  </script>
+</body>
+</html>
