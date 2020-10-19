@@ -66,6 +66,45 @@
         }
       },
     })
+
+    var users = [
+      {
+        name: 'John',
+        email: 'johnson@mail.com',
+        age: 25,
+        address: 'USA',
+        type: 1
+      },
+      {
+        name: 'Tom',
+        email: 'tom@mail.com',
+        age: 35,
+        address: 'England',
+        type: 2
+      },
+      {
+        name: 'Lee',
+        email: 'lee@mail.com',
+        age: 18,
+        address: 'England',
+        type: 3
+      },
+      {
+        name: 'yuta',
+        email: 'yuta@mail.com',
+        age: 48,
+        address: 'Japan',
+        type: 4
+      },
+    ];
+
+    users = users.filter((item)=>{
+      if(item.type == 2 || item.type == 4){
+        return false
+      }
+      return true
+    })
+    console.log(users)
   </script>
 </body>
 </html>
