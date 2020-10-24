@@ -28,11 +28,11 @@
 
       <div>
         <span>Favs:</span>
-        <input type="checkbox" id="netflix"/>
+        <input type="checkbox" id="netflix" value="0" v-model="favs"/>
         <label for="netflix">Netflix and Chill</label>
-        <input type="checkbox" id="coding"/>
+        <input type="checkbox" id="coding" value="1" v-model="favs"/>
         <label for="coding">Coding</label>
-        <input type="checkbox" id="workout"/>
+        <input type="checkbox" id="workout" value="2" v-model="favs"/>
         <label for="workout">Workout</label>
       </div>
 
@@ -59,12 +59,14 @@
       el:'#app',
       data:{
         username: 'Cool Chimp',
-        gender:0
+        gender:0,
+        favs:[1,2]
       },
       methods: {
         handleSubmit() {
           // console.log(this.username)
           console.log(this.gender)
+          console.log(this.favs.toString())
         }
       },
     })
