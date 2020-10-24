@@ -6,6 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <title>v-form</title>
+  <style>
+    form div:nth-child(4){
+      height: auto;
+    }
+  </style>
 </head>
 <body>
   <div id="app">
@@ -38,11 +43,11 @@
 
       <div>
         <span>Job:</span>
-        <select>
-          <option>please choose</option>
-          <option>coder</option>
-          <option>sanitor</option>
-          <option>butcher</option>
+        <select v-model="occupation" multiple="true">
+          <option value="0">please choose</option>
+          <option value="1">coder</option>
+          <option value="2">sanitor</option>
+          <option value="3">butcher</option>
         </select>
       </div>
 
@@ -60,13 +65,15 @@
       data:{
         username: 'Cool Chimp',
         gender:0,
-        favs:[1,2]
+        favs:[1,2],
+        occupation:[1]
       },
       methods: {
         handleSubmit() {
           // console.log(this.username)
           console.log(this.gender)
           console.log(this.favs.toString())
+          console.log(this.occupation.toString())
         }
       },
     })
