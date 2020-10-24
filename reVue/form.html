@@ -52,6 +52,11 @@
       </div>
 
       <div>
+        <span>Description:</span>
+        <textarea name="" id="" cols="20" rows="5" v-model="desc"></textarea>
+      </div>
+
+      <div>
         <!-- submit form -->
         <input type="submit" value="Submit" @click.prevent = "handleSubmit">
       </div>
@@ -66,7 +71,8 @@
         username: 'Cool Chimp',
         gender:0,
         favs:[1,2],
-        occupation:[1]
+        occupation:[1],
+        desc:'锤遍港两句8，懒鬼'
       },
       methods: {
         handleSubmit() {
