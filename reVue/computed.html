@@ -22,49 +22,26 @@
 </head>
 <body>
   <div id="app">
-   <input type="text" v-focus> 
-   <input type="text" > 
-   <input type="text" v-color="msg"> 
-   <div class="box" v-biu = "position"></div>
+   <div>{{msg}}</div>
+   <div>{{reverseString}}</div>
   </div>
 
 
   <script>
-    // 带参数带自定义指令,globally
-    Vue.directive('color', {
-      bind:(el, binding, vnode)=>{
-        console.log(bindinga)
-        el.style.backgroundColor = binding.value.color
-        
-      }
-    });
-    Vue.directive('focus', {
-      inserted:(el, binding, vnode)=>{
-        el.focus()
-      }
-    });
     var app = new Vue({
       el:'#app',
       data:{
-        msg:{
-          color:'orange'
-        },
-        position:{
-          left: '70px'
+        msg:'dummy'
+      },
+      computed: {
+        reverseString() {
+          return this.msg.split('').reverse().join('')
         }
       },
       methods: {
-        handle() {
-        }
       },
       // local directives
       directives:{
-        biu: {
-          bind: function(el,binding){
-            console.log(el.style)
-            el.style.left = binding.value.left
-          }
-        }
       }
     })
   </script>
