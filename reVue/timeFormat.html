@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>v-form</title>
+  <style>
+    input{
+      width: 350px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+   <input type="text" v-model = 'date'>
+   <div>{{date|format('yyyy-mm-dd')}}</div>
+  </div>
+
+
+  <script>
+    Vue.filter('format',function(val,arg){
+      if(arg === 'yyyy-mm-dd'){
+        var ret = '';
+        ret += val.getFullYear() + '-' + (val.getMonth()+1) + '-' + val.getDate()
+        return ret
+      }
+      
+
+    })
+    
+    var app = new Vue({
+      el:'#app',
+      data:{
+        date:new Date(),
+      },
+      computed: {},
+      methods: {
+      },
+    })
+  </script>
+</body>
+</html>
