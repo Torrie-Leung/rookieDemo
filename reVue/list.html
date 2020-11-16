@@ -20,7 +20,7 @@
         {{item}}
       </li>
     </ul>
-    
+    {{info.gender}}
   </div>
   
   <script>
@@ -28,7 +28,11 @@
       el:'#app',
       data:{
         newItem:'',
-        stuff:['cube','polygon','triangle']
+        stuff:['cube','polygon','triangle'],
+        info:{
+          name:'bender',
+          level: 2300
+        }
       },
       methods: {
         addItem() {
@@ -41,6 +45,7 @@
     // app.stuff[3] = 'lemon'
     // 动态处理响应式数据
     Vue.set(app.stuff,3,'lemon')
+    app.$set(app.info,'gender','female')
   </script>
 </body>
 </html>
