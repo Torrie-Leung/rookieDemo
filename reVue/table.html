@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>table</title>
+  <style>
+    #app{
+      min-height: 400px;
+    }
+    table{
+      width: 200px;
+      height: 100%;
+    }
+    thead tr{
+      height: 35px;
+      background: slateblue;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <table>
+      <thead >
+      <tr >
+        <th v-for="(item,index) in th" :key="index">{{item.thead}}</th>
+      </tr>
+    </thead>
+    </table>
+    
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        th:[
+          {
+            thead: 'No.'
+          },
+          {
+            thead: 'Name'
+          },
+          {
+            thead: 'Author'
+          },
+          {
+            thead: 'operation'
+          }
+        ],
+        books: [
+          {id:'001', name:'Promise Land', author: 'Obama'}
+        ]
+      }
+    })
+  </script>
+</body>
+</html>
