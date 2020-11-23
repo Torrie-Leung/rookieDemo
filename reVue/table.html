@@ -11,23 +11,45 @@
       min-height: 400px;
     }
     table{
-      width: 200px;
+      width: 100%;
       height: 100%;
     }
     thead tr{
       height: 35px;
       background: slateblue;
     }
+    tr{
+      text-align: center;
+    }
   </style>
 </head>
 <body>
   <div id="app">
+    <div class="book">
+      <label for="id">No.</label>
+      <input type="text" id="id" v-model="id">
+      <label for="name">Name</label>
+      <input id="name" id="name" v-model="name">
+      <button @click="AddBook">Submit</button>
+    </div>
     <table>
-      <thead >
-      <tr >
-        <th v-for="(item,index) in th" :key="index">{{item.thead}}</th>
+      <thead>
+      <tr>
+        <th v-for="(head,index) in th" :key="index">{{head.thead}}</th>
       </tr>
     </thead>
+    <tbody>
+      <tr :key="index" v-for="(book,index) in books">
+        <td>{{book.id}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.author}}</td>
+        <td>
+          <a href="" @click.prevent>edit</a>
+          <span>|</span>
+          <a href="" @click.prevent>del</a>
+        </td>
+      </tr>
+    </tbody>
     </table>
     
   </div>
@@ -36,6 +58,8 @@
     var app = new Vue({
       el: '#app',
       data: {
+        id:'',
+        name:'',
         th:[
           {
             thead: 'No.'
@@ -51,9 +75,24 @@
           }
         ],
         books: [
-          {id:'001', name:'Promise Land', author: 'Obama'}
+          {id:'001', name:'Promise Land', author: 'Obama'},
+          {id:'002', name:'Born A Crime', author: 'Noah'},
+          {id:'003', name:'Harry Potter', author: 'Rowling'},
         ]
-      }
+      },
+      methods: {
+        edit() {
+          
+        },
+        AddBook(){
+          let book = {}
+          book.id = this.id
+          book.name = this.name
+          this.books.push(book)
+          this.id = ''
+          this.name = ''
+        }
+      },
     })
   </script>
 </body>
