@@ -44,7 +44,7 @@
         <td>{{book.name}}</td>
         <td>{{book.author}}</td>
         <td>
-          <a href="" @click.prevent>edit</a>
+          <a href="" @click.prevent="edit(book.id)">edit</a>
           <span>|</span>
           <a href="" @click.prevent>del</a>
         </td>
@@ -81,8 +81,14 @@
         ]
       },
       methods: {
-        edit() {
-          
+        edit(bookId) {
+          // console.log(bookId)
+          let book = this.books.filter((item) => {
+            return item.id == bookId
+          })
+          console.log(book)
+          this.id = book[0].id
+          this.name = book[0].name
         },
         AddBook(){
           let book = {}
