@@ -93,12 +93,24 @@
           this.permission = true
         },
         AddBook(){
-          let book = {}
-          book.id = this.id
-          book.name = this.name
-          this.books.push(book)
-          this.id = ''
-          this.name = ''
+          if(this.permission){
+            this.books.some((item) => {
+              if(item.id == this.id){
+                item.name = this.name
+                // end iteration
+                return true;
+              }
+            })
+            this.permission = false
+          }else{
+            let book = {}
+            book.id = this.id
+            book.name = this.name
+            this.books.push(book)
+            this.id = ''
+            this.name = ''
+          }
+          
         }
       },
     })
