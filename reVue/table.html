@@ -27,7 +27,7 @@
   <div id="app">
     <div class="book">
       <label for="id">No.</label>
-      <input type="text" id="id" v-model="id">
+      <input type="text" id="id" v-model="id" :disabled="permission">
       <label for="name">Name</label>
       <input id="name" id="name" v-model="name">
       <button @click="AddBook">Submit</button>
@@ -60,6 +60,7 @@
       data: {
         id:'',
         name:'',
+        permission: false,
         th:[
           {
             thead: 'No.'
@@ -86,9 +87,10 @@
           let book = this.books.filter((item) => {
             return item.id == bookId
           })
-          console.log(book)
+          // console.log(book)
           this.id = book[0].id
           this.name = book[0].name
+          this.permission = true
         },
         AddBook(){
           let book = {}
