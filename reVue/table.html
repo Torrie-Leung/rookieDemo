@@ -46,7 +46,7 @@
         <td>
           <a href="" @click.prevent="edit(book.id)">edit</a>
           <span>|</span>
-          <a href="" @click.prevent="deleteBook(book.id)">del</a>
+          <a href="" @click.prevent="deleteBook1(book.id)">del</a>
         </td>
       </tr>
     </tbody>
@@ -118,6 +118,12 @@
             return item.id == id
           })
           this.books.splice(delIndex,1)
+        },
+        // 2nd solution
+        deleteBook1(id){
+          this.books = this.books.filter((item) =>{
+            return item.id != id
+          })
         }
       },
     })
