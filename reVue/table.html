@@ -42,6 +42,7 @@
       <tr :key="index" v-for="(book,index) in books">
         <td>{{book.id}}</td>
         <td>{{book.name}}</td>
+        <td>{{book.date|format('yyyy-mm-dd')}}</td>
         <td>{{book.author}}</td>
         <td>
           <a href="" @click.prevent="edit(book.id)">edit</a>
@@ -55,6 +56,15 @@
   </div>
 
   <script>
+    Vue.filter('format',function(val,arg){
+      if(arg === 'yyyy-mm-dd'){
+        var ret = '';
+        ret += val.getFullYear() + '-' + (val.getMonth()+1) + '-' + val.getDate()
+        return ret
+      }
+      
+
+    })
     var app = new Vue({
       el: '#app',
       data: {
@@ -69,6 +79,9 @@
             thead: 'Name'
           },
           {
+            thead: 'Time'
+          },
+          {
             thead: 'Author'
           },
           {
@@ -76,9 +89,9 @@
           }
         ],
         books: [
-          {id:'001', name:'Promise Land', author: 'Obama'},
-          {id:'002', name:'Born A Crime', author: 'Noah'},
-          {id:'003', name:'Harry Potter', author: 'Rowling'},
+          {id:'001', name:'Promise Land', author: 'Obama',date:new Date()},
+          {id:'002', name:'Born A Crime', author: 'Noah',date:new Date()},
+          {id:'003', name:'Harry Potter', author: 'Rowling',date:new Date()},
         ]
       },
       methods: {
