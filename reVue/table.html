@@ -27,7 +27,7 @@
   <div id="app">
     <div class="book">
       <label for="id">No.</label>
-      <input type="text" id="id" v-model="id" :disabled="permission">
+      <input type="text" id="id" v-model="id" :disabled="permission" v-focus>
       <label for="name">Name</label>
       <input id="name" id="name" v-model="name">
       <button @click="AddBook">Submit</button>
@@ -64,7 +64,12 @@
       }
       
 
-    })
+    });
+    Vue.directive('focus', {
+      inserted:(el, binding, vnode)=>{
+        el.focus()
+      }
+    });
     var app = new Vue({
       el: '#app',
       data: {
