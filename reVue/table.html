@@ -46,8 +46,8 @@
       <tr :key="index" v-for="(book,index) in books">
         <td>{{book.id}}</td>
         <td>{{book.name}}</td>
-        <td v-if="book.date">{{book.date|format('yyyy-mm-dd')}}</td>
-        <td v-if="book.author">{{book.author}}</td>
+        <td >{{book.date|format('yyyy-mm-dd')}}</td>
+        <td >{{book.author}}</td>
         <td>
           <a href="" @click.prevent="edit(book.id)">edit</a>
           <span>|</span>
