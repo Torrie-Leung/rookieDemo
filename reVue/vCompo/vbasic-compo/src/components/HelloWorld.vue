@@ -20,6 +20,7 @@ export default {
   methods: {
     sendIt() {
       this.$emit('currentMsg', 'ææææææ~')
+      this.$bus.$emit('toMyBro', 'hey bro~')
     }
   }
 }
