@@ -22,6 +22,11 @@ export default {
     HelloWorld,
     Bro
   },
+  provide() {
+    return{
+      upper: this
+    }
+  },
   data () {
     return {
       msg: ' Welcome to dummy dummy ',
