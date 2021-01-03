@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    
+    <button @click="check">click to see toast</button>
   </div>
 </template>
 
@@ -9,7 +9,12 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+  methods: {
+    check() {
+      this.$toast('hey hey hey~dummy', 'top')
+    }
+  },
 }
 </script>
 
