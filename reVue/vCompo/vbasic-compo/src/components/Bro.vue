@@ -22,7 +22,7 @@ import Rookie from './Rookie.vue'
     },
     methods: {
       getMsg(msg) {
-        this.myBrosMsg = msg
+        this.myBrosMsg = msg.msg
       }
     },
   }

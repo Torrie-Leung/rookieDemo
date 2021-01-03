@@ -17,10 +17,18 @@ export default {
     msg: String,
     count: Number
   },
+  data() {
+    return {
+      staffMsg: {
+        msg: 'hey bro~'
+      }
+    }
+  },
   methods: {
     sendIt() {
       this.$emit('currentMsg', 'ææææææ~')
-      this.$bus.$emit('toMyBro', 'hey bro~')
+      this.$bus.$emit('toMyBro', this.staffMsg)
+      this.$bus.$emit('leap','inject it~')
     }
   }
 }
