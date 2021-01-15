@@ -1,0 +1,26 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+header{
+  padding: 20px;
+}
+section{
+  color: gainsboro;
+  padding: 20px;
+  /* display: flex;
+  justify-content: space-around; */
+}
+div{
+  display: inline;
+  width: 300px;
+  background: darkcyan;
+  text-align: center;
+}
+footer{
+  padding: 10px 20px;
+}
+header, footer{
+  color: white;
+  background: black;
+}
