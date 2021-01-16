@@ -5,15 +5,27 @@ body{
 header{
   padding: 20px;
 }
+ul{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+li{
+  display: inline-block;
+  margin-right: 20px;
+}
 section{
   color: gainsboro;
   padding: 20px;
-  /* display: flex;
-  justify-content: space-around; */
+  display: flex;
+  /* deafault */
+  flex-direction: row; 
+  /* justify-content: space-around; */
 }
 div{
-  display: inline;
-  width: 300px;
+  /* display: inline-block; */
+  width: 250px;
+  margin: auto;
   background: darkcyan;
   text-align: center;
 }
