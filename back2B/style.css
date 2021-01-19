@@ -8,9 +8,13 @@ body{
 
 header{
   background-color: black;
+  background-image: url("./img/bigcase.jpg");
+  background-size: 100%;
+  background-position: center;
   padding: 20px ;
-  height: 100px;
+  height: 400px;
   text-align: center;
+  
 }
 header a{
   color:#fff;
@@ -38,7 +42,7 @@ nav li{
   display: inline-block;
   margin-right: 20px;
 }
-section{
+.features{
   color: gainsboro;
   padding: 20px;
   display: flex;
@@ -46,17 +50,24 @@ section{
   flex-direction: row; 
   /* justify-content: space-around; */
 }
-div{
+.features figure{
   /* display: inline-block; */
   width: 250px;
   margin: auto;
-  background: darkcyan;
   text-align: center;
 }
+.features figure img{
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: gainsboro 0 0 5px;
+}
 footer{
+  background: black;
+  font-size: 12px;
+  text-align: center;
   padding: 10px 20px;
 }
 header, footer{
   color: white;
-  background: black;
+  /* background: black; */
 }
