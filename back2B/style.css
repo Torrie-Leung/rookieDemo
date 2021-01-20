@@ -47,12 +47,15 @@ nav li{
   display: none;
 }
 /* responsive rules */
-@media screen and (max-width: 725px){
+@media screen and (max-width: 705px){
   .desktop{
     display: none;
   }
   .mobile{
     display: inline-block;
+  }
+  header{
+    height: 200px;
   }
   header .logo a{
     top:-43px;
@@ -64,6 +67,8 @@ nav li{
   display: flex;
   /* deafault */
   flex-direction: row; 
+  /* awesome way */
+  flex-wrap: wrap;
   /* justify-content: space-around; */
 }
 .features figure{
@@ -77,6 +82,13 @@ nav li{
   border-radius: 50%;
   box-shadow: gainsboro 0 0 5px;
 }
+
+/* responsive rules */
+/* @media screen and (max-width: 833px){
+  .features{
+    display: block;
+  }
+} */
 footer{
   background: black;
   font-size: 12px;
