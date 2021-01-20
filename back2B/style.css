@@ -33,6 +33,7 @@ header .logo a{
   position: relative;
   top: -68px;
 }
+
 nav ul{
   padding: 0;
   margin: 0;
@@ -41,6 +42,21 @@ nav ul{
 nav li{
   display: inline-block;
   margin-right: 20px;
+}
+.mobile{
+  display: none;
+}
+/* responsive rules */
+@media screen and (max-width: 725px){
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: inline-block;
+  }
+  header .logo a{
+    top:-43px;
+  }
 }
 .features{
   color: gainsboro;
@@ -71,3 +87,4 @@ header, footer{
   color: white;
   /* background: black; */
 }
+
