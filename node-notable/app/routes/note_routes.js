@@ -28,7 +28,6 @@ module.exports = function(app, db){
   })
 
   // put
-  // get
   app.put('/notes/:id',(req,res)=>{
     const id = req.params.id
     const details = {'_id': new ObjectID(id)}

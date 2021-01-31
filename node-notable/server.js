@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // })
 
 MongoClient.connect(db.url,{ useUnifiedTopology: true },(err,database) => {
-  let db = database.db()
+  let db = database.db() //use database.db() function
   if(err) return console.log('connect err:',err);
   require('./app/routes')(app, db)
   app.listen(port, ()=>{
