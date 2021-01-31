@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>events</title>
+</head>
+<body>
+  <div class="main">
+    <h1>JS Events</h1>
+    <div class="mission-one">
+      <h3>Add Numbers:</h3>
+      <input type="text" id="num-one"> + <input type="text" id="num-two"> = <sapn id="add-sum"></sapn>
+    </div>
+    
+  </div>
+  <script>
+    let numOne = document.getElementById('num-one');
+    let numTwo = document.getElementById('num-two');
+    let addSum = document.getElementById('add-sum');
+
+    numOne.addEventListener('input', add);
+    numTwo.addEventListener('input', add);
+
+    function add() {
+      let one = Number(numOne.value);
+      let two = Number(numTwo.value);
+      addSum.innerHTML = one + two
+    }
+  </script>
+</body>
+</html>
