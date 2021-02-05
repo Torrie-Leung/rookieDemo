@@ -14,5 +14,6 @@ function editItem(){
   input.setSelectionRange(0,input.value.length);
 }
 function updateItem(){
-  console.log(this.value);
+  this.previousElementSibling.innerHTML = this.value
+  this.parentNode.className = ''
 }
