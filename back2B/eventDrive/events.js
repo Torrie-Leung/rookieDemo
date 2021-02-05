@@ -7,4 +7,7 @@ for(var i = 0; i < items.length; i++){
 
 function editItem(){
   this.className = 'edit'
+  var input = this.querySelector('input')
+  input.focus()
+  input.setSelectionRange(0,input.value.length);
 }
