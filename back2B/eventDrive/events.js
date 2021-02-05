@@ -5,6 +5,7 @@ var inputs = checklist.querySelectorAll('input')
 for(var i = 0; i < items.length; i++){
   items[i].addEventListener('click',editItem)
   inputs[i].addEventListener('blur',updateItem)
+  inputs[i].addEventListener('keypress',itemKeypress)
 }
 
 function editItem(){
@@ -16,4 +17,10 @@ function editItem(){
 function updateItem(){
   this.previousElementSibling.innerHTML = this.value
   this.parentNode.className = ''
+}
+function itemKeypress(event){
+  // enter's event.which - 13
+  if(event.which == 13){
+    updateItem.call(this)
+  }
 }
