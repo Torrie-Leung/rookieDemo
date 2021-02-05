@@ -24,8 +24,12 @@
     numTwo.addEventListener('input', add);
 
     function add() {
-      let one = Number(numOne.value);
-      let two = Number(numTwo.value);
+      // let one = Number(numOne.value);
+      // let two = Number(numTwo.value);
+
+      // if input value is not a number, use 0 instead
+      let one = parseFloat(numOne.value) || 0;
+      let two = parseFloat(numTwo.value) || 0;
       addSum.innerHTML = one + two
     }
   </script>
