@@ -21,6 +21,7 @@ function updateItem(){
 function itemKeypress(event){
   // enter's event.which - 13
   if(event.which == 13){
+    //  it's going to set this to whatever I give it
     updateItem.call(this)
   }
 }
