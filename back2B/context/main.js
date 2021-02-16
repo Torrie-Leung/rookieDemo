@@ -18,3 +18,11 @@ $('li').on('click',function(){
   currTimes++;
   $(this).find('span').html(currTimes)
 })
+
+$('#self').on('click',function(){
+  // redirect this to self
+  let self = this
+  $('#selfBlock').slideToggle(100,function(){
+    $(self).toggleClass("active")
+  })
+})
