@@ -26,3 +26,10 @@ $('#self').on('click',function(){
     $(self).toggleClass("active")
   })
 })
+
+//use bind to redirect
+$('#bind').on('click',function(){
+  $('#bindBlock').slideToggle(90,function(){
+    $(this).toggleClass('active')
+  }.bind(this))
+})
