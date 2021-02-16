@@ -12,3 +12,9 @@ obj.foo.call(window) // true
 // apply only takes 2 args 1st: the new context, 2nd: an array
 
 $('body').on('click',obj.foo)
+
+$('li').on('click',function(){
+  var currTimes = parseInt($(this).find('span').html())
+  currTimes++;
+  $(this).find('span').html(currTimes)
+})
