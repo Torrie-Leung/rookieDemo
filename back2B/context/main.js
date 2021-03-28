@@ -33,3 +33,4 @@ $('#bind').on('click',function(){
     $(this).toggleClass('active')
   }.bind(this))
 })
+console.log('all the walls go to hell')
