@@ -5,15 +5,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>cs50 lecture 5</title>
-</head>
-<body>
-  <h1>Hey</h1>
-  <button onclick="hello()">click here</button>
   <script>
     function hello(){
       const head = document.querySelector('h1');
       head.innerHTML === 'Hey' ? head.innerHTML='Bye': head.innerHTML='Hey'
     }
+    document.addEventListener('DOMContentLoaded',function(){
+      const name = document.getElementById('myName')
+      const form = document.querySelector('form')
+      form.onsubmit = function(){
+        const inputName = name.value
+        console.log(inputName)
+      }
+    })
   </script>
+</head>
+<body>
+  <h1>Hey</h1>
+  <button onclick="hello()">click here</button>
+  <form>
+    <input id="myName" placeholder="your name" type="text" autofocus>
+    <button type="submit" value="">submit
+  </form>
+  
 </body>
 </html>
