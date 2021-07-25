@@ -9,14 +9,20 @@
 </head>
 <body>
   <h1 id="hey">Hey~</h1>
-  <button id="red" onclick="changeColor(this)">red</button>
-  <button id="blue" onclick="changeColor(this)">blue</button>
-  <button id="green" onclick="changeColor(this)">green</button>
+  <button id="red" >red</button>
+  <button id="blue" >blue</button>
+  <button id="green" >green</button>
 
   <script>
     function changeColor(btn){
-        document.querySelector('#hey').style.color = btn.id
+      document.querySelector('#hey').style.color = btn.id
+    }
+    // 循环遍历绑定
+    document.querySelectorAll('button').forEach(function(button){
+      button.onclick = function(){
+        document.querySelector('#hey').style.color = button.id
       }
+    })
   </script>
 </body>
 </html>
