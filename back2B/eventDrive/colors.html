@@ -9,9 +9,9 @@
 </head>
 <body>
   <h1 id="hey">Hey~</h1>
-  <button id="red" >red</button>
-  <button id="blue" >blue</button>
-  <button id="green" >green</button>
+  <button data-color="red" >red</button>
+  <button data-color="blue" >blue</button>
+  <button data-color="green" >green</button>
 
   <script>
     function changeColor(btn){
@@ -20,7 +20,7 @@
     // 循环遍历绑定
     document.querySelectorAll('button').forEach(function(button){
       button.onclick = function(){
-        document.querySelector('#hey').style.color = button.id
+        document.querySelector('#hey').style.color = button.dataset.color
       }
     })
   </script>
